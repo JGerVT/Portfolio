@@ -22,7 +22,8 @@ export default function Home() {
                                 <p className="text-[#3B61F8]">&nbsp;&</p>
                             </div>
                             <p className="flex text-[#3B61F8]">
-                                Website Designer
+                                {/* Website Designer */}
+                                Software Developer
                             </p>
                         </div>
                     </div>
