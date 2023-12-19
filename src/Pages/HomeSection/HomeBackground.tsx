@@ -24,9 +24,9 @@ export function HomeBackground() {
                 const mouseX = e.clientX - centerX;
                 const mouseY = e.clientY - centerY;
 
-                if(e.clientY < rect.bottom){
+                // if(e.clientY < rect.bottom){
                     setMousePosOffset({ x: mouseX, y: mouseY });
-                }
+                // }
             };
 
             // Attach the event listener to the document

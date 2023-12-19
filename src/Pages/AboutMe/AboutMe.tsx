@@ -6,22 +6,28 @@ import { VscGithub } from "react-icons/vsc";
 import { FaMusic } from "react-icons/fa6";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { FaBookOpen } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 
 export default function AboutMe() {
     return (
-        <div id="AboutSection" className="py-28 w-[1300px] flex flex-1 justify-between">
+        <div
+            id="AboutSection"
+            className="py-28 max-w-[1300px] w-[80%] flex flex-1 justify-between space-x-10"
+        >
             <div id="LeftAboutSection">
                 <AboutMeProfilePicture />
             </div>
-            <div id="RightAboutSection" className="text-left w-[680px] space-y-[40px] self-center pb-2">
+            <div
+                id="RightAboutSection"
+                className="text-left w-[680px] space-y-[40px] self-center pb-2"
+            >
                 <AboutMeInfo />
                 <AboutMeLinks />
-                <AboutMeInterests/>
+                <AboutMeInterests />
             </div>
         </div>
     );
 }
-
 
 function AboutMeProfilePicture() {
     return (
@@ -83,7 +89,7 @@ function AboutMeLinks() {
     }) {
         return (
             <div className="flex">
-                <div className="flex w-[200px] items-center space-x-4">
+                <div className="flex w-[150px] items-center space-x-4">
                     {props.icon}
                     <p className="text-white">{props.name}</p>
                 </div>
@@ -94,8 +100,6 @@ function AboutMeLinks() {
         );
     }
 }
-
-
 
 function AboutMeInterests() {
     return (
@@ -113,12 +117,12 @@ function AboutMeInterests() {
                     Name="Gaming"
                 />
                 <AboutMeInterest
-                    icon={<FaBookOpen color="white" size={"23px"} />}
-                    Name="Learning"
+                    icon={<FaCode color="white" size={"23px"} />}
+                    Name="Programming"
                 />
                 <AboutMeInterest
-                    icon={<FaMusic color="white" size={"23px"} />}
-                    Name="Music"
+                    icon={<FaBookOpen color="white" size={"23px"} />}
+                    Name="Learning"
                 />
             </div>
         </div>

@@ -8,7 +8,8 @@ export default function Home() {
             <HomeBackground />
             <div
                 id="Content"
-                className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex text-white max-w-[1400px] z-10 justify-between w-[1300px]"
+                className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex text-white z-10 justify-between 
+                w-[80%]  max-w-[1300px]"
             >
                 <div
                     id="leftContent"
