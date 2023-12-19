@@ -9,11 +9,11 @@ import { FaBookOpen } from "react-icons/fa";
 
 export default function AboutMe() {
     return (
-        <div className="p-28 flex space-x-[200px]">
+        <div id="AboutSection" className="py-28 w-[1300px] flex flex-1 justify-between">
             <div id="LeftAboutSection">
                 <AboutMeProfilePicture />
             </div>
-            <div id="RightAboutSection" className="text-left w-[680px] pt-6 space-y-[48px]">
+            <div id="RightAboutSection" className="text-left w-[680px] space-y-[40px] self-center pb-2">
                 <AboutMeInfo />
                 <AboutMeLinks />
                 <AboutMeInterests/>

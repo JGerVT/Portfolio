@@ -28,7 +28,7 @@ function Links() {
                 <p>Past Works</p>
             </li>
             <li className="flex cursor-pointer h-full items-center px-5 text-white">
-                <div className="cursor-pointer bg-[#3b61f8] rounded-full px-7 h-10 flex items-center">
+                <div className="cursor-pointer bg-[#3b61f8] rounded-full px-7 h-[36px] flex items-center">
                     <p>Contact</p>
                 </div>
             </li>
