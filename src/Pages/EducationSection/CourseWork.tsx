@@ -36,9 +36,6 @@ function AccordionWrapper(props: { courseData: CourseData, index: number }) {
     );
 
     function HeaderButton() {
-        console.log(props.index);
-        
-
         return <div
             onClick={() => {
                 setIsCollapsed(!isCollapsed);
@@ -65,9 +62,9 @@ function CreateCourseWork(props: { courseData: CourseData }) {
                         <p className="text-[#5594F2] text-[15px] font-semibold">
                             {data.CourseLocation}
                         </p>
-                        {data.CourseData.map((courseData_) => {
+                        {data.CourseData.map((courseData_, i) => {
                             return (
-                                <div className="flex justify-between text-gray-300 text-[15px] space-y-[3px]">
+                                <div className="flex justify-between text-gray-300 text-[15px] space-y-[3px]" key={"CreateCourseWorkSub_" + i}>
                                     <p className=" pl-6">
                                         {courseData_.courseName}
                                     </p>
