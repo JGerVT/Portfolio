@@ -84,6 +84,10 @@ export const WebDevelopmentData = {
                 {
                     courseName: "Programming for the Internet",
                     courseTime: "Winter - 2018",
+                },
+                {
+                    courseName: "Website Development I",
+                    courseTime: "Fall - 2018",
                 }
             ],
         },

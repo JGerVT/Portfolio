@@ -18,7 +18,7 @@ export function Education() {
                 >
                     <p className="text-lg text-[#5594F2]">Education</p>
                     <p className="text-2xl text-white font-semibold pb-4">
-                        Relevant Course Work
+                        Course Work
                     </p>
                     <CourseWork />
                 </div>

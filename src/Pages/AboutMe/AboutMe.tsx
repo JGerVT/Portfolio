@@ -20,7 +20,7 @@ export default function AboutMe() {
                 </div>
                 <div
                     id="RightAboutSection"
-                    className="text-left w-[680px] space-y-[40px] self-center pb-2"
+                    className="text-left w-[680px] space-y-[43px] self-center pb-2"
                 >
                     <AboutMeInfo />
                     <AboutMeLinks />
