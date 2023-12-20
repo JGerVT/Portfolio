@@ -10,20 +10,22 @@ import { FaCode } from "react-icons/fa";
 
 export default function AboutMe() {
     return (
-        <div
-            id="AboutSection"
-            className="py-28 max-w-[1300px] w-[80%] flex flex-1 justify-between space-x-10"
-        >
-            <div id="LeftAboutSection">
-                <AboutMeProfilePicture />
-            </div>
+        <div className="flex w-full justify-center py-28 text-left pb-14">
             <div
-                id="RightAboutSection"
-                className="text-left w-[680px] space-y-[40px] self-center pb-2"
+                id="AboutSection"
+                className="max-w-[1400px] px-14 w-[80%] flex flex-1 justify-between space-x-10"
             >
-                <AboutMeInfo />
-                <AboutMeLinks />
-                <AboutMeInterests />
+                <div id="LeftAboutSection">
+                    <AboutMeProfilePicture />
+                </div>
+                <div
+                    id="RightAboutSection"
+                    className="text-left w-[680px] space-y-[40px] self-center pb-2"
+                >
+                    <AboutMeInfo />
+                    <AboutMeLinks />
+                    <AboutMeInterests />
+                </div>
             </div>
         </div>
     );

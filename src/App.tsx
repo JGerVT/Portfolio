@@ -7,11 +7,14 @@ import { Education } from './Pages/EducationSection/Education';
 
 function App() {
   return (
-    <div className="App flex flex-col items-center">
+    <div className="App flex flex-col items-center bg-[#101219]">
       <Header/>
       <Home/>
       <AboutMe/>
       <Education/>
+      <div className='h-[600px] w-full'>
+        {/* Skill Levels */}
+      </div>
     </div>
   );
 }

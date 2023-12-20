@@ -10,7 +10,7 @@ export function HomeBackground() {
         x: number;
         y: number;
     }>({ x: 0, y: 0 });
-    const animationScale = {Front: .009, Mid: .003, Back: .0008}
+    const animationScale = { Front: 0.009, Mid: 0.003, Back: 0.0008 };
 
     useEffect(() => {
         if (ContainerRef.current) {
@@ -25,7 +25,7 @@ export function HomeBackground() {
                 const mouseY = e.clientY - centerY;
 
                 // if(e.clientY < rect.bottom){
-                    setMousePosOffset({ x: mouseX, y: mouseY });
+                setMousePosOffset({ x: mouseX, y: mouseY });
                 // }
             };
 
@@ -37,46 +37,63 @@ export function HomeBackground() {
             };
         }
     }, []);
-    
+
     return (
         <div
             ref={ContainerRef}
             id="Background"
             className="relative flex z-0 pointer-events-none select-none h-full overflow-hidden"
+            style={{ transform: "translate(-50%)", left: "50%" }}
         >
-            <div
-                id="Back-IMG"
-                className={`absolute`}
-                style={{transform: `translate(${mousePosOffset.x * animationScale.Back}px, ${mousePosOffset.y * animationScale.Back}px)`}}
-            >
-                <img
-                    src={Back}
-                    alt=""
-                    className="max-w-none absolute top-[-1660px] left-[-50px] pointer-events-none"
-                />
-            </div>
-            <div
-                style={{transform: `translate(${mousePosOffset.x * animationScale.Mid}px, ${mousePosOffset.y * animationScale.Mid}px)`}}>
-                <img
-                    src={Mid}
-                    alt=""
-                    className="max-w-none absolute top-[-130px] left-[-400px] scale-[90%] w-[2826px]  pointer-events-none"
-                />
-            </div>
-            <div
-                style={{transform: `translate(${mousePosOffset.x * animationScale.Front}px, ${mousePosOffset.y * animationScale.Front}px)`}}>
-                <img
-                    src={Front}
-                    alt=""
-                    className="max-w-none absolute top-[-100px] left-[220px] scale-[83%]  pointer-events-none"
-                />
-            </div>
+            <div className="relative">
+                <div
+                    id="Back-IMG"
+                    className={`absolute`}
+                    style={{
+                        transform: `translate(${
+                            mousePosOffset.x * animationScale.Back
+                        }px, ${mousePosOffset.y * animationScale.Back}px)`,
+                    }}
+                >
+                    <img
+                        src={Back}
+                        alt=""
+                        className="max-w-none absolute top-[-1680px] left-[-50px] pointer-events-none"
+                    />
+                </div>
+                <div
+                    style={{
+                        transform: `translate(${
+                            mousePosOffset.x * animationScale.Mid
+                        }px, ${mousePosOffset.y * animationScale.Mid}px)`,
+                    }}
+                >
+                    <img
+                        src={Mid}
+                        alt=""
+                        className="max-w-none absolute top-[-150px] left-[-400px] scale-[87%] w-[2826px]  pointer-events-none"
+                    />
+                </div>
+                <div
+                    style={{
+                        transform: `translate(${
+                            mousePosOffset.x * animationScale.Front
+                        }px, ${mousePosOffset.y * animationScale.Front}px)`,
+                    }}
+                >
+                    <img
+                        src={Front}
+                        alt=""
+                        className="max-w-none absolute top-[-120px] left-[220px] scale-[83%]  pointer-events-none"
+                    />
+                </div>
 
-            <img
-                src={BottomWave}
-                alt=""
-                className="max-w-none absolute top-[820px] left-[-120px] pointer-events-none" 
-            />
+                <img
+                    src={BottomWave}
+                    alt=""
+                    className="max-w-none absolute bottom-[-680px] left-[-120px] pointer-events-none"
+                />
+            </div>
         </div>
     );
 }

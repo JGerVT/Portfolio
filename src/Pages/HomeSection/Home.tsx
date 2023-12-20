@@ -9,7 +9,7 @@ export default function Home() {
             <div
                 id="Content"
                 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex text-white z-10 justify-between 
-                w-[80%]  max-w-[1300px]"
+                w-[80%]  max-w-[1400px] px-14"
             >
                 <div
                     id="leftContent"

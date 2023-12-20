@@ -14,7 +14,7 @@ export interface Course {
 }
 
 export const ProgrammingData = {
-    name: "Programming and Databases",
+    name: "Programming",
     data: [
         {
             CourseLocation: "Champlain College",
@@ -32,23 +32,11 @@ export const ProgrammingData = {
                     courseTime: "Summer - 2022",
                 },
                 {
-                    courseName: "C++ Programming I",
+                    courseName: "C++ Programming II",
                     courseTime: "Spring - 2022",
                 },
                 {
-                    courseName: "C++ Programming II",
-                    courseTime: "Summer - 2022",
-                },
-                {
-                    courseName: "Information Systems Analysis & Design",
-                    courseTime: "Summer - 2021",
-                },
-                {
-                    courseName: "Enterprise Database Systems",
-                    courseTime: "Spring - 2021",
-                },
-                {
-                    courseName: "Relational Database Design and SQL",
+                    courseName: "C++ Programming I",
                     courseTime: "Spring - 2022",
                 },
                 {
@@ -61,65 +49,32 @@ export const ProgrammingData = {
             CourseLocation: "Community College of Vermont",
             CourseData: [
                 {
-                    courseName: "Intro to Python",
-                    courseTime: "Fall - 2020",
+                    courseName: "Java Programming",
+                    courseTime: "Winter - 2018",
                 },
             ],
-        },
-        {
-            CourseLocation: "Udemy",
-            CourseData: [
-                {
-                    courseName: "Understanding TypeScript",
-                    courseTime: "Fall - 2023",
-                },
-            ],
-        },
+        }
     ],
 };
 
 
 export const WebDevelopmentData = {
-    name: "WebDevelopment",
+    name: "Web Development",
     data: [
         {
             CourseLocation: "Champlain College",
             CourseData: [
                 {
-                    courseName: "Applied Software Practice",
-                    courseTime: "Fall - 2022",
-                },
-                {
-                    courseName: "Linux/ Unix Programming I",
-                    courseTime: "Fall - 2022",
-                },
-                {
-                    courseName: "Data Structures & Algorithms",
-                    courseTime: "Summer - 2022",
-                },
-                {
-                    courseName: "C++ Programming I",
+                    courseName: "Usability Web/Software Design",
                     courseTime: "Spring - 2022",
                 },
                 {
-                    courseName: "C++ Programming II",
-                    courseTime: "Summer - 2022",
+                    courseName: "Web Page Development II",
+                    courseTime: "Spring - 2022",
                 },
                 {
-                    courseName: "Information Systems Analysis & Design",
-                    courseTime: "Summer - 2021",
-                },
-                {
-                    courseName: "Enterprise Database Systems",
+                    courseName: "Information Systems Analysis and Design",
                     courseTime: "Spring - 2021",
-                },
-                {
-                    courseName: "Relational Database Design and SQL",
-                    courseTime: "Spring - 2022",
-                },
-                {
-                    courseName: "Intro to Python",
-                    courseTime: "Fall - 2020",
                 },
             ],
         },
@@ -127,9 +82,9 @@ export const WebDevelopmentData = {
             CourseLocation: "Community College of Vermont",
             CourseData: [
                 {
-                    courseName: "Intro to Python",
-                    courseTime: "Fall - 2020",
-                },
+                    courseName: "Programming for the Internet",
+                    courseTime: "Winter - 2018",
+                }
             ],
         },
         {
@@ -143,3 +98,102 @@ export const WebDevelopmentData = {
         },
     ],
 };
+
+export const DatabaseData = {
+    name: "Databases",
+    data: [
+        {
+            CourseLocation: "Champlain College",
+            CourseData: [
+                {
+                    courseName: "Data Structures & Algorithms",
+                    courseTime: "Summer - 2022",
+                },
+                {
+                    courseName: "Enterprise Database Systems",
+                    courseTime: "Spring - 2021",
+                },
+                {
+                    courseName: "Relational Database Design and SQL",
+                    courseTime: "Spring - 2021",
+                },
+            ],
+        },
+    ],
+}
+
+export const MathData = {
+    name: "Math",
+    data: [
+        {
+            CourseLocation: "Champlain College",
+            CourseData: [
+                {
+                    courseName: "Data Structures and Algorithms",
+                    courseTime: "Summer - 2022",
+                },
+                {
+                    courseName: "Discrete Mathematics",
+                    courseTime: "Summer - 2021",
+                },
+            ],
+        },
+        {
+            CourseLocation: "Community College of Vermont",
+            CourseData: [
+                {
+                    courseName: "Physics I",
+                    courseTime: "Spring - 2019",
+                },
+                {
+                    courseName: "Calculus I",
+                    courseTime: "Fall - 2018",
+                },
+                {
+                    courseName: "Pre-Calculus Mathematics",
+                    courseTime: "Fall - 2017",
+                },
+            ],
+        }
+    ],
+}
+
+export const EnglishData = {
+    name: "Writing and Communication",
+    data: [
+        {
+            CourseLocation: "Champlain College",
+            CourseData: [
+                {
+                    courseName: "Small Group Communication ",
+                    courseTime: "Spring - 2022",
+                },
+                {
+                    courseName: "Social Interaction/Digital Age ",
+                    courseTime: "Fall - 2021",
+                },
+            ],
+        },
+        {
+            CourseLocation: "Community College of Vermont",
+            CourseData: [
+                {
+                    courseName: "Intercultural Communication ",
+                    courseTime: "Summer - 2020",
+                },
+                {
+                    courseName: "Seminar in Educational Inquiry ",
+                    courseTime: "Winter - 2020",
+                },
+                {
+                    courseName: "Technical Writing & Research",
+                    courseTime: "Fall - 2019",
+                },
+                {
+                    courseName: "English Composition",
+                    courseTime: "Summer - 2018",
+                },
+            ],
+        }
+    ],
+}
