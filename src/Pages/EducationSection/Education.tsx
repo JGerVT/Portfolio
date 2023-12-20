@@ -40,66 +40,43 @@ function Degrees() {
                 src={graduation}
                 alt="Graduation Icon"
                 className="w-[20px]" />
-            <p className="text-white font-bold text-lg">Degrees</p>
+            <p className="text-white font-bold text-xl">Degrees</p>
         </div>
 
-        <div className="flex flex-1 flex-col justify-between mb-8 z-10">
-            <div className="flex space-x-4">
-                <img
-                    src={Champlain_College_seal}
-                    className="w-[70px] object-scale-down object-top pt-2"
-                    alt="Champlain College Seal" />
-                <div className="text-white">
-                    <div className="flex space-x-2">
-                        <p className="font-bold">
-                            Champlain College
-                        </p>
-                    </div>
-                    <p>(Aug 2020 - Dec 2022)</p>
-                    <div className="flex space-x-2">
-                        <p className="font-bold">Degree: </p>
-                        <p>Bachelors of Science (BS)</p>
-                    </div>
-                    <div className="flex space-x-2">
-                        <p className="font-bold">Major: </p>
-                        <p>Software Development</p>
-                    </div>
-                    <div className="flex space-x-2">
-                        <p className="font-bold">GPA: </p>
-                        <p>4.0</p>
-                    </div>
-                </div>
-            </div>
-
+        <div className="flex flex-1 flex-col justify-between mb-4 z-10">
+            <Degree CollegeIcon={Champlain_College_seal} CollegeName="Champlain College" Date="(Aug 2020 - Dec 2022)" Degree="Bachelors of Science (BS)" Major="Software Development" GPA="4.0 / 4.0" />
             <div className="border-b opacity-[.1]" />
-
-            <div className="flex space-x-4">
-                <img
-                    src={CCV_seal}
-                    className="w-[70px] object-scale-down object-top pt-2"
-                    alt="Champlain College Seal" />
-                <div className="text-white">
-                    <div className="flex space-x-2">
-                        <p className="font-bold">
-                            Community College of Vermont
-                        </p>
-                    </div>
-                    <p>(Aug 2017 - May 2020)</p>
-                    <div className="flex space-x-2">
-                        <p className="font-bold">Degree: </p>
-                        <p>Associate of Arts (AA)</p>
-                    </div>
-                    <div className="flex space-x-2">
-                        <p className="font-bold">Major: </p>
-                        <p>Liberal Studies</p>
-                    </div>
-                    <div className="flex space-x-2">
-                        <p className="font-bold">GPA: </p>
-                        <p>3.9</p>
-                    </div>
-                </div>
-            </div>
+            <Degree CollegeIcon={CCV_seal}  CollegeName="Community College of Vermont" Date="(Aug 2017 - May 2020)" Degree="Associate of Arts (AA)" Major="Liberal Studies" GPA="3.9 / 4.0" />
         </div>
     </div>;
+
+    function Degree(props:{CollegeIcon: string, CollegeName: string,  Date: string, Degree: string, Major: string, GPA: string}) {
+        return <div className="flex space-x-4">
+            <img
+                src={props.CollegeIcon}
+                className="w-[70px] object-scale-down object-top pt-2"
+                alt="Champlain College Seal" />
+            <div className="text-white space-y-[3px]">
+                <div className="flex space-x-2">
+                    <p className="font-bold">
+                        {props.CollegeName}
+                    </p>
+                </div>
+                <p className="text-gray-300">{props.Date}</p>
+                <div className="flex space-x-2">
+                    <p className="font-bold w-[70px]">Degree</p>
+                    <p className="text-gray-300">{props.Degree}</p>
+                </div>
+                <div className="flex space-x-2">
+                    <p className="font-bold w-[70px]">Major</p>
+                    <p className="text-gray-300">{props.Major}</p>
+                </div>
+                <div className="flex space-x-2">
+                    <p className="font-bold w-[70px]">GPA</p>
+                    <p className="text-gray-300">{props.GPA}</p>
+                </div>
+            </div>
+        </div>;
+    }
 }
 
