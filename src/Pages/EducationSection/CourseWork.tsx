@@ -59,9 +59,9 @@ function AccordionWrapper(props: { courseData: CourseData, index: number }) {
 function CreateCourseWork(props: { courseData: CourseData }) {
     return (
         <div className="py-[10px]">
-            {props.courseData.data.map((data) => {
+            {props.courseData.data.map((data, i) => {
                 return (
-                    <div className="pb-2 ">
+                    <div className="pb-2 " key={"CreateCourseWork_" + i}>
                         <p className="text-[#5594F2] text-[15px] font-semibold">
                             {data.CourseLocation}
                         </p>

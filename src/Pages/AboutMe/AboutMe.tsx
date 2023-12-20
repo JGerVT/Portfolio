@@ -62,24 +62,35 @@ function AboutMeInfo() {
 }
 
 function AboutMeLinks() {
+    const AboutMeData = [
+        {
+            icon: <MdOutlineEmail color="white" size={"23px"} />,
+            name: "Email",
+            value: "email123@gmail.com",
+        },
+        {
+            icon: <CiLinkedin color="white" size={"23px"} />,
+            name: "LinkedIn",
+            value: "Jesse Germain",
+        },
+        {
+            icon: <VscGithub color="white" size={"23px"} />,
+            name: "GitHub",
+            value: "JGVT",
+        },
+    ];
+
     return (
         <div id="AboutMeLinks">
             <div className="space-y-4">
-                <AboutMeContent
-                    icon={<MdOutlineEmail size={"23px"} color="white" />}
-                    name="Email"
-                    value="email123@gmail.com"
-                />
-                <AboutMeContent
-                    icon={<CiLinkedin size={"23px"} color="white" />}
-                    name="LinkedIn"
-                    value="Jesse Germain"
-                />
-                <AboutMeContent
-                    icon={<VscGithub size={"23px"} color="white" />}
-                    name="GitHub"
-                    value="JGVT"
-                />
+                {AboutMeData.map((data, i) => (
+                    <AboutMeContent
+                        key={"AboutMeLinks_" + i}
+                        icon={data.icon}
+                        name={data.name}
+                        value={data.value}
+                    />
+                ))}
             </div>
         </div>
     );
@@ -104,28 +115,28 @@ function AboutMeLinks() {
 }
 
 function AboutMeInterests() {
+    const AboutMeData = [
+        { icon: <FaMusic color="white" size={"23px"} />, name: "Music" },
+        {
+            icon: <IoLogoGameControllerB color="white" size={"23px"} />,
+            name: "Gaming",
+        },
+        { icon: <FaCode color="white" size={"23px"} />, name: "Programming" },
+        { icon: <FaBookOpen color="white" size={"23px"} />, name: "Learning" },
+    ];
     return (
         <div id="AboutMeInterests">
             <p className="text-lg text-white font-semibold pb-4">
                 My Interests
             </p>
             <div className="flex justify-between">
-                <AboutMeInterest
-                    icon={<FaMusic color="white" size={"23px"} />}
-                    Name="Music"
-                />
-                <AboutMeInterest
-                    icon={<IoLogoGameControllerB color="white" size={"23px"} />}
-                    Name="Gaming"
-                />
-                <AboutMeInterest
-                    icon={<FaCode color="white" size={"23px"} />}
-                    Name="Programming"
-                />
-                <AboutMeInterest
-                    icon={<FaBookOpen color="white" size={"23px"} />}
-                    Name="Learning"
-                />
+                {AboutMeData.map((data, i) => (
+                    <AboutMeInterest
+                        icon={data.icon}
+                        Name={data.name}
+                        key={"Interests_" + i}
+                    />
+                ))}
             </div>
         </div>
     );
