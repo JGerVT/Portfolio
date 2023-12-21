@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../Resources/Logo.svg";
 
 export default function Header() {
@@ -13,13 +13,69 @@ export default function Header() {
 }
 
 function Links() {
+    const [selectedNav, setSelectedNav] = useState<string>("");
+
+
+    useEffect(() => { //* Used for tracking the scroll position and setting the highlighted header bar.
+        const Home = document.querySelector('#Home')
+        const About = document.querySelector('#About')
+        const Education = document.querySelector('#Education')
+        const Skills = document.querySelector('#Skills')
+        const PastWorks = document.querySelector('#PastWorks')
+        const Contact = document.querySelector('#Contact')
+
+        const handleScroll = () => {
+            if(Home !== null && isInViewport(Home)){
+                setNav("Home");
+            }
+            else if(About !== null && isInViewport(About)){
+                setNav("About");
+            }
+            else if(Education !== null && isInViewport(Education)){
+                setNav("Education");
+            }
+            else if(Skills !== null && isInViewport(Skills)){
+                setNav("Skills");
+            }
+            else if(PastWorks !== null && isInViewport(PastWorks)){
+                setNav("Past Works");
+            }
+            else if(Contact !== null && isInViewport(Contact)){
+                setNav("Contact");
+            }
+            else{
+                setNav("Contact"); 
+            }
+        };
+      
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    function setNav(name: string){
+        if (name != selectedNav){
+            setSelectedNav(name)
+        }
+    }
+
+    function isInViewport(el: Element | undefined) {
+        if(el !== undefined){
+            const rect = el.getBoundingClientRect();
+            return (rect.bottom > 200) // Offset for scroll check is 200 px
+        }
+    }
+    
+
     return (
         <ul className="flex text-gray-300 h-full">
-            <Links title="Home" isSelected />
-            <Links title="About" />
-            <Links title="Education" />
-            <Links title="Skills" />
-            <Links title="Past Works" />
+            <Links title="Home" selectedNav={selectedNav} />
+            <Links title="About" selectedNav={selectedNav}/>
+            <Links title="Education" selectedNav={selectedNav}/>
+            <Links title="Skills" selectedNav={selectedNav}/>
+            <Links title="Past Works" selectedNav={selectedNav}/>
             <li className="flex cursor-pointer h-full items-center px-5 text-white">
                 <div className="cursor-pointer bg-[#3b61f8] rounded-full px-7 h-[36px] flex items-center">
                     <p>Contact</p>
@@ -28,7 +84,7 @@ function Links() {
         </ul>
     );
 
-    function Links(props: { title: string; isSelected?: boolean }) {
+    function Links(props: { title: string; selectedNav: string }) {
         function onClick(){
             if(props.title === "Home"){
                 window.scroll({ top: 0, behavior: "smooth" });
@@ -49,7 +105,7 @@ function Links() {
                 id={`Link-${props.title}`}
                 className="flex cursor-pointer h-full items-center px-5 border-2 border-transparent"
                 style={{
-                    borderBottom: props.isSelected ? "2px solid #3b61f8" : "",
+                    borderBottom: props.selectedNav === props.title ? "2px solid #3b61f8" : "",
                 }}
                 onClick={onClick}
             >

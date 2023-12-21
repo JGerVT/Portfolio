@@ -5,6 +5,7 @@ import Home from './Pages/HomeSection/Home';
 import AboutMe from './Pages/AboutMe/AboutMe';
 import { Education } from './Pages/EducationSection/Education';
 import Skills from './Pages/Skills/Skills';
+import ParentSection from './Components/ParentSection';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <AboutMe/>
       <Education/>
       <Skills/>
+      <ParentSection sectionID='PastWorks'><p></p></ParentSection>
+      <ParentSection sectionID='Contact'><p></p></ParentSection>
     </div>
   );
 }
