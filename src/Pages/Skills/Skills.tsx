@@ -18,33 +18,43 @@ const SkillsData = {
         { name: "PyQt", amt: 65 },
         { name: "C#", amt: 40 },
         { name: "Java", amt: 30 },
-        { header: "Database", },
+        { header: "Database" },
         { name: "JSON", amt: 90 },
         { name: "SQL", amt: 55 },
     ],
 };
 
 export default function Skills() {
-
-    function CreateSkills(data: {header?: string, name?: string, amt?: number, needsPaddingTop?: boolean}[]){
-        const FormattedData = data.map((data) => {
+    function CreateSkills(
+        data: {
+            header?: string;
+            name?: string;
+            amt?: number;
+            needsPaddingTop?: boolean;
+        }[]
+    ) {
+        const FormattedData = data.map((data, i) => {
             if (data.header !== undefined) {
                 return (
-                    <HeaderText HeaderText={data.header} needsPaddingTop={data.needsPaddingTop}/>
+                    <HeaderText
+                        key={"Skills_Header_" + i}
+                        HeaderText={data.header}
+                        needsPaddingTop={data.needsPaddingTop}
+                    />
                 );
-            } else if(data.name !== undefined && data.amt !== undefined) {
+            } else if (data.name !== undefined && data.amt !== undefined) {
                 return (
                     <Skill
+                        key={"Skill_" + i}
                         skillName={data.name}
                         skillAmt={data.amt}
                     />
                 );
             }
-        })
+        });
 
         return FormattedData;
     }
-
 
     return (
         <ParentSection sectionID="Skills" paddingY="90px">
@@ -64,17 +74,24 @@ export default function Skills() {
         </ParentSection>
     );
 
-    function HeaderText(props: { HeaderText: string, needsPaddingTop?: boolean }) {
+    function HeaderText(props: {
+        HeaderText: string;
+        needsPaddingTop?: boolean;
+    }) {
         return (
-            <p className="text-2xl text-white font-semibold pb-3"
-                style={{paddingTop: props.needsPaddingTop? "13px": ""}}
+            <p
+                className="text-2xl text-white font-semibold pb-3"
+                style={{ paddingTop: props.needsPaddingTop ? "13px" : "" }}
             >
                 {props.HeaderText}
             </p>
         );
     }
 
-    function Skill(props: { skillName: string; skillAmt: number }) {
+    function Skill(props: {
+        skillName: string;
+        skillAmt: number;
+    }) {
         return (
             <div className="Skill text-white space-y-2 mb-4">
                 <div className="flex justify-between">

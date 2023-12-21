@@ -4,7 +4,7 @@ import ProgrammerSVG from "../../Resources/ProgrammerSVG.svg";
 
 export default function Home() {
     return (
-        <div id="HomeSection" className="w-full relative max-w-[1920px] h-[100vh] min-h-[600px] max-h-[980px] bg-[#121723] pt-16 overflow-hidden items-center object-center justify-center">
+        <div id="Home" className="w-full relative max-w-[1920px] h-[100vh] min-h-[600px] max-h-[980px] bg-[#121723] pt-16 overflow-hidden items-center object-center justify-center">
             <HomeBackground />
             <div
                 id="Content"

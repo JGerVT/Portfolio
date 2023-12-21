@@ -29,6 +29,21 @@ function Links() {
     );
 
     function Links(props: { title: string; isSelected?: boolean }) {
+        function onClick(){
+            if(props.title === "Home"){
+                window.scroll({ top: 0, behavior: "smooth" });
+            }
+            else {
+                // Jump to element with id of button name (Spaces are removed)
+                if(document.querySelector('#'+ props.title)){
+                    const elmnt = document.querySelector('#'+ props.title) as HTMLElement;
+                    var topOfElement = elmnt.offsetTop - 64; // 64 is height of Header bar
+                    window.scroll({ top: topOfElement, behavior: "smooth" });
+                }
+
+            }
+        }
+
         return (
             <li
                 id={`Link-${props.title}`}
@@ -36,6 +51,7 @@ function Links() {
                 style={{
                     borderBottom: props.isSelected ? "2px solid #3b61f8" : "",
                 }}
+                onClick={onClick}
             >
                 <p>{props.title}</p>
             </li>
