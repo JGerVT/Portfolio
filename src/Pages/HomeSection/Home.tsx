@@ -29,7 +29,7 @@ export default function Home() {
                         </div>
                     </div>
                     <p>
-                        I work on both front-end and back-end development, and
+                        As a Full Stack Developer and Software Engineer, 
                         I'm passionate about creating functional and
                         user-friendly applications. While I'm in the early
                         stages of my career, I'm eager to contribute my skills

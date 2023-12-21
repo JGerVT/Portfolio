@@ -4,6 +4,7 @@ import Header from './Pages/Header/Header';
 import Home from './Pages/HomeSection/Home';
 import AboutMe from './Pages/AboutMe/AboutMe';
 import { Education } from './Pages/EducationSection/Education';
+import Skills from './Pages/Skills/Skills';
 
 function App() {
   return (
@@ -12,12 +13,9 @@ function App() {
       <Home/>
       <AboutMe/>
       <Education/>
-      <div className='h-[600px] w-full'>
-        {/* Skill Levels */}
-      </div>
+      <Skills/>
     </div>
   );
 }
 
 export default App;
-

@@ -3,7 +3,7 @@ import Logo from "../../Resources/Logo.svg";
 
 export default function Header() {
     return (
-        <div className="fixed flex h-16 justify-center items-center bg-[#101219] w-full top-0 z-50">
+        <div className="fixed flex h-16 justify-center items-center bg-black w-full top-0 z-50">
             <div className="flex px-10 grow h-full">
                 <LeftLogo />
                 <Links />
@@ -38,7 +38,7 @@ function Links() {
 
 function LeftLogo() {
     return (
-        <div className="flex grow text-white items-center space-x-4 ">
+        <div className="flex grow text-white items-center space-x-4 cursor-pointer" onClick={()=>{}}>
             <img src={Logo} alt="Logo" className="w-[38px]" />
             <div className="flex space-x-[5px] pb-1">
                 <p className="text-[20px]">Jesse</p>

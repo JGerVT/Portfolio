@@ -11,6 +11,7 @@ export interface CourseSource {
 export interface Course {
     courseName: string;
     courseTime: string;
+    link?: string;
 }
 
 export const ProgrammingData = {
@@ -97,6 +98,7 @@ export const WebDevelopmentData = {
                 {
                     courseName: "Understanding TypeScript",
                     courseTime: "Fall - 2023",
+                    link: "https://www.udemy.com/course/understanding-typescript/?LSNPUBID=5bg3qy4EQo8&ranEAID=5bg3qy4EQo8&ranMID=39197&ranSiteID=5bg3qy4EQo8-2k5t7ey6vJmn0VWS6wlRwA" 
                 },
             ],
         },

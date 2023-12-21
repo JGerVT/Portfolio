@@ -7,14 +7,11 @@ import { FaMusic } from "react-icons/fa6";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { FaBookOpen } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
+import ParentSection from "../../Components/ParentSection";
 
 export default function AboutMe() {
     return (
-        <div className="flex w-full justify-center py-28 text-left pb-14">
-            <div
-                id="AboutSection"
-                className="max-w-[1400px] px-14 w-[80%] flex flex-1 justify-between space-x-10"
-            >
+        <ParentSection sectionID="About">
                 <div id="LeftAboutSection">
                     <AboutMeProfilePicture />
                 </div>
@@ -26,8 +23,7 @@ export default function AboutMe() {
                     <AboutMeLinks />
                     <AboutMeInterests />
                 </div>
-            </div>
-        </div>
+        </ParentSection>
     );
 }
 
@@ -49,13 +45,10 @@ function AboutMeProfilePicture() {
 function AboutMeInfo() {
     return (
         <div id="AboutMeInfo">
-            <p className="text-lg text-[#5594F2]">Full Stack Developer</p>
+            <p className="text-lg text-[#5594F2]">Info</p>
             <p className="text-2xl text-white font-semibold pb-4">About Me</p>
             <p className="text-white text-base">
-                As a novice Full Stack Developer, I have hands-on experience in
-                creating responsive and dynamic user interfaces using React and
-                PyQt. My backend skills include working with Python and Java,
-                and I'm adept at managing data through SQL and JSON databases.
+            From my years of personal programming experience, I bring hands-on experience in designing responsive and dynamic user interfaces using cutting-edge technologies such as React and PyQt. My programming experience spans across Python, Java, and C#, and I have extensive experience managing data through SQL and JSON databases. Additionally, I have experience crafting user-friendly interfaces, leveraging tools such as Adobe Xd and Figma.
             </p>
         </div>
     );
