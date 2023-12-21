@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../Resources/Logo.svg";
+import { getCoords } from "../../Utility/utility";
 
 export default function Header() {
     return (
         <div className="fixed flex h-16 justify-center items-center bg-black w-full top-0 z-50">
             <div className="flex px-10 grow h-full">
                 <LeftLogo />
-                <Links />
+                <LinksSection />
             </div>
         </div>
     );
 }
 
-function Links() {
+function LinksSection() {
     const [selectedNav, setSelectedNav] = useState<string>("");
-
+    const scrollPosOffset = -300;
 
     useEffect(() => { //* Used for tracking the scroll position and setting the highlighted header bar.
-        const Home = document.querySelector('#Home')
         const About = document.querySelector('#About')
         const Education = document.querySelector('#Education')
         const Skills = document.querySelector('#Skills')
@@ -25,26 +25,29 @@ function Links() {
         const Contact = document.querySelector('#Contact')
 
         const handleScroll = () => {
-            if(Home !== null && isInViewport(Home)){
-                setNav("Home");
+            const scrollPos = document.documentElement.scrollTop;
+
+            // For each section, check if scroll is before next section.
+            if(About !== null && scrollPos <= getCoords(About).top + scrollPosOffset){
+                setSelectedNav("Home");
             }
-            else if(About !== null && isInViewport(About)){
-                setNav("About");
+            else if(Education !== null && scrollPos <= getCoords(Education).top + scrollPosOffset){
+                setSelectedNav("About");
             }
-            else if(Education !== null && isInViewport(Education)){
-                setNav("Education");
+            else if(Skills !== null && scrollPos <= getCoords(Skills).top + scrollPosOffset){
+                setSelectedNav("Education");
             }
-            else if(Skills !== null && isInViewport(Skills)){
-                setNav("Skills");
+            else if(PastWorks !== null && scrollPos <= getCoords(PastWorks).top + scrollPosOffset){
+                setSelectedNav("Skills");
             }
-            else if(PastWorks !== null && isInViewport(PastWorks)){
-                setNav("Past Works");
+            else if(Contact !== null && scrollPos <= getCoords(Contact).top + scrollPosOffset){
+                setSelectedNav("Past Works");
             }
-            else if(Contact !== null && isInViewport(Contact)){
-                setNav("Contact");
+            else if(Contact !== null && scrollPos >= getCoords(Contact).top + scrollPosOffset){
+                setSelectedNav("Contact");
             }
             else{
-                setNav("Contact"); 
+                setSelectedNav(""); 
             }
         };
       
@@ -54,19 +57,6 @@ function Links() {
           window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-
-    function setNav(name: string){
-        if (name != selectedNav){
-            setSelectedNav(name)
-        }
-    }
-
-    function isInViewport(el: Element | undefined) {
-        if(el !== undefined){
-            const rect = el.getBoundingClientRect();
-            return (rect.bottom > 200) // Offset for scroll check is 200 px
-        }
-    }
     
 
     return (
@@ -106,6 +96,7 @@ function Links() {
                 className="flex cursor-pointer h-full items-center px-5 border-2 border-transparent"
                 style={{
                     borderBottom: props.selectedNav === props.title ? "2px solid #3b61f8" : "",
+                    color: props.selectedNav === props.title ? "white" : ""
                 }}
                 onClick={onClick}
             >
