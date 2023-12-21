@@ -15,18 +15,11 @@ export default function Header() {
 function Links() {
     return (
         <ul className="flex text-gray-300 h-full">
-            <li className="flex cursor-pointer h-full items-center px-5 border-2 border-transparent border-b-blue-500">
-                <p>Home</p>
-            </li>
-            <li className="flex cursor-pointer h-full items-center px-5 border-2  border-transparent">
-                <p>About</p>
-            </li>
-            <li className="flex cursor-pointer h-full items-center px-5 border-2  border-transparent">
-                <p>Education</p>
-            </li>
-            <li className="flex cursor-pointer h-full items-center px-5 border-2  border-transparent">
-                <p>Past Works</p>
-            </li>
+            <Links title="Home" isSelected />
+            <Links title="About" />
+            <Links title="Education" />
+            <Links title="Skills" />
+            <Links title="Past Works" />
             <li className="flex cursor-pointer h-full items-center px-5 text-white">
                 <div className="cursor-pointer bg-[#3b61f8] rounded-full px-7 h-[36px] flex items-center">
                     <p>Contact</p>
@@ -34,11 +27,28 @@ function Links() {
             </li>
         </ul>
     );
+
+    function Links(props: { title: string; isSelected?: boolean }) {
+        return (
+            <li
+                id={`Link-${props.title}`}
+                className="flex cursor-pointer h-full items-center px-5 border-2 border-transparent"
+                style={{
+                    borderBottom: props.isSelected ? "2px solid #3b61f8" : "",
+                }}
+            >
+                <p>{props.title}</p>
+            </li>
+        );
+    }
 }
 
 function LeftLogo() {
     return (
-        <div className="flex grow text-white items-center space-x-4 cursor-pointer" onClick={()=>{}}>
+        <div
+            className="flex grow text-white items-center space-x-4 cursor-pointer"
+            onClick={() => {}}
+        >
             <img src={Logo} alt="Logo" className="w-[38px]" />
             <div className="flex space-x-[5px] pb-1">
                 <p className="text-[20px]">Jesse</p>
