@@ -98,7 +98,12 @@ export const WebDevelopmentData = {
                 {
                     courseName: "Understanding TypeScript",
                     courseTime: "Fall - 2023",
-                    link: "https://www.udemy.com/course/understanding-typescript/?LSNPUBID=5bg3qy4EQo8&ranEAID=5bg3qy4EQo8&ranMID=39197&ranSiteID=5bg3qy4EQo8-2k5t7ey6vJmn0VWS6wlRwA" 
+                    link: "https://www.udemy.com/course/understanding-typescript/" 
+                },
+                {
+                    courseName: "React.js & Firebase Project - ReactJS 18, Firebase 9 Project",
+                    courseTime: "Winter - 2024",
+                    link: "https://www.udemy.com/course/reactjs-firebase-project/" 
                 },
             ],
         },

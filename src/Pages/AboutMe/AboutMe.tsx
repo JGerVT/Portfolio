@@ -8,6 +8,7 @@ import { IoLogoGameControllerB } from "react-icons/io";
 import { FaBookOpen } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import ParentSection from "../../Components/ParentSection";
+import { IoLocationSharp } from "react-icons/io5";
 
 export default function AboutMe() {
     return (
@@ -17,7 +18,7 @@ export default function AboutMe() {
                 </div>
                 <div
                     id="RightAboutSection"
-                    className="text-left w-[680px] space-y-[43px] self-center pb-2"
+                    className="text-left w-[680px] space-y-[38px] self-center pb-1"
                 >
                     <AboutMeInfo />
                     <AboutMeLinks />
@@ -56,6 +57,11 @@ function AboutMeInfo() {
 
 function AboutMeLinks() {
     const AboutMeData = [
+        {
+            icon: <IoLocationSharp  color="white" size={"23px"} />,
+            name: "Location",
+            value: "USA, Vermont",
+        },
         {
             icon: <MdOutlineEmail color="white" size={"23px"} />,
             name: "Email",
