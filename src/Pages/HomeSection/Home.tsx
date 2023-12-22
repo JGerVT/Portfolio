@@ -1,10 +1,14 @@
 import React from "react";
 import { HomeBackground } from "./HomeBackground";
 import ProgrammerSVG from "../../Resources/ProgrammerSVG.svg";
+import { SmoothScrollToElement } from "../../Utility/utility";
 
 export default function Home() {
     return (
-        <div id="Home" className="w-full relative max-w-[1920px] h-[100vh] min-h-[600px] max-h-[980px] bg-[#121723] pt-16 overflow-hidden items-center object-center justify-center">
+        <div
+            id="Home"
+            className="w-full relative max-w-[1920px] h-[100vh] min-h-[600px] max-h-[980px] bg-[#121723] pt-16 overflow-hidden items-center object-center justify-center"
+        >
             <HomeBackground />
             <div
                 id="Content"
@@ -29,18 +33,28 @@ export default function Home() {
                         </div>
                     </div>
                     <p>
-                        As a Full Stack Developer and Software Engineer, 
-                        I'm passionate about creating functional and
-                        user-friendly applications. While I'm in the early
-                        stages of my career, I'm eager to contribute my skills
-                        and learn from experienced professionals in the field.
+                        As a Full Stack Developer and Software Engineer, I'm
+                        passionate about creating functional and user-friendly
+                        applications. While I'm in the early stages of my
+                        career, I'm eager to contribute my skills and learn from
+                        experienced professionals in the field.
                     </p>
 
                     <div id="buttons" className="flex space-x-10 pt-8">
-                        <div className="w-[150px] h-[45px]  h-50px text-center flex justify-center items-center rounded-full bg-[#3B61F8] cursor-pointer">
+                        <div
+                            className="w-[150px] h-[45px]  h-50px text-center flex justify-center items-center rounded-full bg-[#3B61F8] cursor-pointer"
+                            onClick={() => {
+                                SmoothScrollToElement("Contact");
+                            }}
+                        >
                             Contact Me
                         </div>
-                        <div className="w-[150px] h-[45px] h-50px text-center flex justify-center items-center rounded-full border border-[#3B61F8]  cursor-pointer">
+                        <div
+                            className="w-[150px] h-[45px] h-50px text-center flex justify-center items-center rounded-full border border-[#3B61F8]  cursor-pointer"
+                            onClick={() => {
+                                SmoothScrollToElement("PastWorks");
+                            }}
+                        >
                             View Works
                         </div>
                     </div>

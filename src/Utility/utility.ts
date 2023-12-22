@@ -15,3 +15,18 @@ export function getCoords(elem: Element) { // crossbrowser version
 
     return { top: Math.round(top), left: Math.round(left) };
 }
+
+export function SmoothScrollToElement(id: string){
+    if(id === "Home"){
+        window.scroll({ top: 0, behavior: "smooth" });
+    }
+    else {
+        // Jump to element with id of button name (Spaces are removed)
+        if(document.querySelector('#'+ id)){
+            const elmnt = document.querySelector('#'+ id) as HTMLElement;
+            var topOfElement = elmnt.offsetTop - 64; // 64 is height of Header bar
+            window.scroll({ top: topOfElement, behavior: "smooth" });
+        }
+
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../Resources/Logo.svg";
-import { getCoords } from "../../Utility/utility";
+import { SmoothScrollToElement, getCoords } from "../../Utility/utility";
 
 export default function Header() {
     return (
@@ -43,9 +43,9 @@ function LinksSection() {
             else if(Contact !== null && scrollPos <= getCoords(Contact).top + scrollPosOffset){
                 setSelectedNav("Past Works");
             }
-            else if(Contact !== null && scrollPos >= getCoords(Contact).top + scrollPosOffset){
-                setSelectedNav("Contact");
-            }
+            // else if(Contact !== null && scrollPos >= getCoords(Contact).top + scrollPosOffset){
+            //     setSelectedNav("Contact");
+            // }
             else{
                 setSelectedNav(""); 
             }
@@ -76,18 +76,7 @@ function LinksSection() {
 
     function Links(props: { title: string; selectedNav: string }) {
         function onClick(){
-            if(props.title === "Home"){
-                window.scroll({ top: 0, behavior: "smooth" });
-            }
-            else {
-                // Jump to element with id of button name (Spaces are removed)
-                if(document.querySelector('#'+ props.title)){
-                    const elmnt = document.querySelector('#'+ props.title) as HTMLElement;
-                    var topOfElement = elmnt.offsetTop - 64; // 64 is height of Header bar
-                    window.scroll({ top: topOfElement, behavior: "smooth" });
-                }
-
-            }
+            SmoothScrollToElement(props.title);
         }
 
         return (
@@ -115,7 +104,7 @@ function LeftLogo() {
             <img src={Logo} alt="Logo" className="w-[38px]" />
             <div className="flex space-x-[5px] pb-1">
                 <p className="text-[20px]">Jesse</p>
-                <p className="text-[20px] text-[#4C6FF9]">Germain</p>
+                <p className="text-[20px] text-blue-500">Germain</p>
             </div>
         </div>
     );

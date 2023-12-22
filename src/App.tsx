@@ -5,7 +5,9 @@ import Home from './Pages/HomeSection/Home';
 import AboutMe from './Pages/AboutMe/AboutMe';
 import { Education } from './Pages/EducationSection/Education';
 import Skills from './Pages/Skills/Skills';
-import ParentSection from './Components/ParentSection';
+import PastWorks from './Pages/PastWorks/PastWorks';
+import Contact from './Pages/Contact/Contact';
+import Footer from './Pages/Footer/Footer';
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
       <AboutMe/>
       <Education/>
       <Skills/>
-      <ParentSection sectionID='PastWorks'><p></p></ParentSection>
-      <ParentSection sectionID='Contact'><p></p></ParentSection>
+      <PastWorks/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
