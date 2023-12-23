@@ -4,7 +4,7 @@ import ShinyOverlay from "../../Resources/shinyOverlay.png";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { projectsData } from "./projectsData";
 
-export default function PastWorks() {
+export default function Projects() {
     const [canScrollRight, setCanScrollRight] = useState(false);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const GameContainer = useRef<HTMLDivElement>(null);
@@ -104,7 +104,7 @@ export default function PastWorks() {
 
     return (
         <ParentSection
-            sectionID="PastWorks"
+            sectionID="Projects"
             backgroundColor="#152b48"
             paddingY="70px"
             backgroundIMG={ShinyOverlay}

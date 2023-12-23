@@ -13,7 +13,7 @@ export default function Contact() {
             backgroundColor="#121723"
             paddingY="80px"
         >
-            <div className="flex flex-1 flex-col text-white mb-10">
+            <div className="flex flex-1 flex-col text-white mb-16">
                 <ContactHeader />
                 <div className="flex space-x-10">
                     <ContactForm />
@@ -29,6 +29,12 @@ export default function Contact() {
                 <p className="text-lg text-[#5594F2]">Contact</p>
                 <p className="text-2xl text-white font-semibold pb-2">
                     Get In Touch
+                </p>
+                <p className="pt-1 pb-6 text-gray-300">
+                    For any inquiries, work-related matters, or potential
+                    collaboration opportunities, feel free to utilize
+                    the provided contact information.I am looking forward to
+                    the connecting with you.
                 </p>
             </div>
         );

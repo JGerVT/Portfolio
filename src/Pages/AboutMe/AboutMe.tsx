@@ -13,12 +13,12 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function AboutMe() {
     return (
         <ParentSection sectionID="About">
-                <div id="LeftAboutSection">
+                <div id="LeftAboutSection" className="self-center">
                     <AboutMeProfilePicture />
                 </div>
                 <div
                     id="RightAboutSection"
-                    className="text-left w-[680px] space-y-[38px] self-center pb-1"
+                    className="text-left w-[680px] space-y-[50px] self-center pb-1"
                 >
                     <AboutMeInfo />
                     <AboutMeLinks />

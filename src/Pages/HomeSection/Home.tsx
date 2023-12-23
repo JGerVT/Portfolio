@@ -40,7 +40,7 @@ export default function Home() {
                         experienced professionals in the field.
                     </p>
 
-                    <div id="buttons" className="flex space-x-10 pt-8">
+                    <div id="buttons" className="flex space-x-8 pt-8">
                         <div
                             className="w-[150px] h-[45px]  h-50px text-center flex justify-center items-center rounded-full bg-[#3B61F8] cursor-pointer"
                             onClick={() => {
@@ -52,10 +52,10 @@ export default function Home() {
                         <div
                             className="w-[150px] h-[45px] h-50px text-center flex justify-center items-center rounded-full border border-[#3B61F8]  cursor-pointer"
                             onClick={() => {
-                                SmoothScrollToElement("PastWorks");
+                                SmoothScrollToElement("Projects");
                             }}
                         >
-                            View Works
+                            View Projects
                         </div>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ export default function Footer() {
 
     function Logo() {
         return (
-            <div className="flex items-start text-white space-x-4 border-r ml-6 pr-[100px] border-white border-opacity-20 pt-2">
+            <div className="flex items-start text-white space-x-4 border-r pr-[140px] border-white border-opacity-20 pt-2">
                 <img src={LogoSVG} alt="Logo" className="w-[38px]" />
                 <div className="mt-[2px] pl-1">
                     <p className="text-[20px] leading-3">Jesse</p>
@@ -75,10 +75,10 @@ export default function Footer() {
                     <p
                         className="cursor-pointer hover:text-white"
                         onClick={() => {
-                            SmoothScrollToElement("PastWorks");
+                            SmoothScrollToElement("Projects");
                         }}
                     >
-                        Past Works
+                        Projects
                     </p>
                     <p
                         className="cursor-pointer hover:text-white"
@@ -95,8 +95,11 @@ export default function Footer() {
     function Resources() {
         return (
             <div className="flex items-start text-gray-300 space-x-4 ml-6  pt-2">
-                <div className="mt-1 pl-2">
-                    <p className="text-blue-500">Resources</p>
+                <div className="mt-1 pl-2 flex flex-col">
+                    <p className="text-blue-500">Attributions</p>
+                    <a href="https://www.vecteezy.com/free-vector/coder">
+                        Coder Vectors by Vecteezy
+                    </a>
                     <a
                         className="hover:text-white"
                         href="https://react-icons.github.io/react-icons/"

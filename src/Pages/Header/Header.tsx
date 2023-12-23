@@ -21,7 +21,7 @@ function LinksSection() {
         const About = document.querySelector('#About')
         const Education = document.querySelector('#Education')
         const Skills = document.querySelector('#Skills')
-        const PastWorks = document.querySelector('#PastWorks')
+        const Projects = document.querySelector('#Projects')
         const Contact = document.querySelector('#Contact')
 
         const handleScroll = () => {
@@ -37,11 +37,11 @@ function LinksSection() {
             else if(Skills !== null && scrollPos <= getCoords(Skills).top + scrollPosOffset){
                 setSelectedNav("Education");
             }
-            else if(PastWorks !== null && scrollPos <= getCoords(PastWorks).top + scrollPosOffset){
+            else if(Projects !== null && scrollPos <= getCoords(Projects).top + scrollPosOffset){
                 setSelectedNav("Skills");
             }
             else if(Contact !== null && scrollPos <= getCoords(Contact).top + scrollPosOffset){
-                setSelectedNav("Past Works");
+                setSelectedNav("Projects");
             }
             // else if(Contact !== null && scrollPos >= getCoords(Contact).top + scrollPosOffset){
             //     setSelectedNav("Contact");
@@ -65,8 +65,8 @@ function LinksSection() {
             <Links title="About" selectedNav={selectedNav}/>
             <Links title="Education" selectedNav={selectedNav}/>
             <Links title="Skills" selectedNav={selectedNav}/>
-            <Links title="Past Works" selectedNav={selectedNav}/>
-            <li className="flex cursor-pointer h-full items-center px-5 text-white">
+            <Links title="Projects" selectedNav={selectedNav}/>
+            <li className="flex cursor-pointer h-full items-center px-5 text-white" onClick={() => {SmoothScrollToElement("Contact")}}>
                 <div className="cursor-pointer bg-[#3b61f8] rounded-full px-7 h-[36px] flex items-center">
                     <p>Contact</p>
                 </div>

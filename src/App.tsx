@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import './fonts.css';
 import Header from './Pages/Header/Header';
 import Home from './Pages/HomeSection/Home';
 import AboutMe from './Pages/AboutMe/AboutMe';
 import { Education } from './Pages/EducationSection/Education';
 import Skills from './Pages/Skills/Skills';
-import PastWorks from './Pages/PastWorks/PastWorks';
+import Projects from './Pages/PastWorks/Projects';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Footer/Footer';
 
@@ -17,7 +18,7 @@ function App() {
       <AboutMe/>
       <Education/>
       <Skills/>
-      <PastWorks/>
+      <Projects/>
       <Contact/>
       <Footer/>
     </div>

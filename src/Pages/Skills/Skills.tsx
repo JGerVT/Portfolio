@@ -7,18 +7,20 @@ const SkillsData = {
         { name: "JavaScript / TypeScript", amt: 65 },
         { name: "React / React Native", amt: 60 },
         { name: "Tailwind CSS", amt: 60 },
+        { name: "styled-components", amt: 60 },
         { header: "Design", needsPaddingTop: true },
         { name: "Adobe Xd", amt: 80 },
         { name: "Figma", amt: 45 },
         { name: "Affinity Designer", amt: 25 },
     ],
     rightSection: [
-        { header: "Programming", needsPaddingTop: true },
+        { header: "Programming" },
         { name: "Python", amt: 60 },
         { name: "PyQt", amt: 65 },
         { name: "C#", amt: 40 },
+        { name: "C/C++", amt: 25 },
         { name: "Java", amt: 30 },
-        { header: "Database" },
+        { header: "Database", needsPaddingTop: true },
         { name: "JSON", amt: 90 },
         { name: "SQL", amt: 55 },
     ],
@@ -58,7 +60,7 @@ export default function Skills() {
 
     return (
         <ParentSection sectionID="Skills" paddingY="90px">
-            <div className="flex flex-1 flex-col text-left">
+            <div className="flex flex-1 flex-col text-left pb-[15px]">
                 <p className="text-lg text-[#5594F2]">Skills</p>
                 <div>
                     <div id="SkillsContainer" className=" flex space-x-20">
@@ -69,6 +71,7 @@ export default function Skills() {
                             {CreateSkills(SkillsData.rightSection)}
                         </div>
                     </div>
+                    <p className="absolute text-[14px] text-gray-500 mt-4">* These percentages reflect subjective self-assessments of my current skill levels and are not based on any standardized metric.</p>
                 </div>
             </div>
         </ParentSection>
@@ -95,8 +98,8 @@ export default function Skills() {
         return (
             <div className="Skill text-white space-y-2 mb-4">
                 <div className="flex justify-between">
-                    <p>{props.skillName}</p>
-                    <p>{props.skillAmt}%</p>
+                    <p className="text-gray-300" >{props.skillName}</p>
+                    <p className="text-gray-300">{props.skillAmt}%</p>
                 </div>
                 <div className="w-full h-[8px] bg-[#262F47] rounded-full">
                     <div

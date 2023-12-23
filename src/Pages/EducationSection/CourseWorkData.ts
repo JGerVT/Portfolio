@@ -25,6 +25,10 @@ export const ProgrammingData = {
                     courseTime: "Fall - 2022",
                 },
                 {
+                    courseName: "Operating Systems Architecture ",
+                    courseTime: "Fall - 2022",
+                },
+                {
                     courseName: "Linux/ Unix Programming I",
                     courseTime: "Fall - 2022",
                 },
