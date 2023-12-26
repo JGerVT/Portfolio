@@ -6,6 +6,7 @@ export default function ParentSection(props: {
     backgroundColor?: string;
     paddingY?: string;
     backgroundIMG?: string;
+    backgroundOpacity?: number;
 }) {
     return (
         <div
@@ -28,6 +29,7 @@ export default function ParentSection(props: {
                     src={props.backgroundIMG}
                     alt="Past Work Background"
                     className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover pointer-events-none select-none"
+                    style={{opacity: props.backgroundOpacity !== undefined ? `${props.backgroundOpacity}%`:"100%"}}
                 />
             )}
             </div>

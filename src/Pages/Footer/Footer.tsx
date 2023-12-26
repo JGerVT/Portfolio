@@ -97,12 +97,18 @@ export default function Footer() {
             <div className="flex items-start text-gray-300 space-x-4 ml-6  pt-2">
                 <div className="mt-1 pl-2 flex flex-col">
                     <p className="text-blue-500">Attributions</p>
-                    <a href="https://www.vecteezy.com/free-vector/coder">
+                    <a
+                        href="https://www.vecteezy.com/free-vector/coder"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Coder Vectors by Vecteezy
                     </a>
                     <a
                         className="hover:text-white"
                         href="https://react-icons.github.io/react-icons/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         React Icons
                     </a>
@@ -114,12 +120,22 @@ export default function Footer() {
     function Links() {
         return (
             <div className="flex flex-col items-start text-gray-300 space-y-4 cursor-pointer ml-6  pt-2">
-                <div className="w-[48px] h-[48px] rounded-full border-2 border-[#3b61f8] flex justify-center items-center">
+                <a
+                    className="w-[48px] h-[48px] rounded-full border-2 border-[#3b61f8] flex justify-center items-center"
+                    href="https://www.linkedin.com/in/jesse-germain-a6351126b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaLinkedin color="white" size={"26px"} />
-                </div>
-                <div className="w-[48px] h-[48px] rounded-full border-2 border-[#3b61f8] flex justify-center items-center">
+                </a>
+                <a
+                    className="w-[48px] h-[48px] rounded-full border-2 border-[#3b61f8] flex justify-center items-center"
+                    href="https://github.com/JGerVT"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaGithub color="white" size={"26px"} />
-                </div>
+                </a>
                 <div className="w-[48px] h-[48px] rounded-full border-2 border-[#3b61f8] flex justify-center items-center">
                     <MdEmail color="white" size={"26px"} />
                 </div>

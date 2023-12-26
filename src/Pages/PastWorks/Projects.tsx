@@ -105,9 +105,10 @@ export default function Projects() {
     return (
         <ParentSection
             sectionID="Projects"
-            backgroundColor="#152b48"
+            backgroundColor="#0d151f"
             paddingY="70px"
             backgroundIMG={ShinyOverlay}
+            backgroundOpacity={60}
         >
             <div className="relative w-full h-full z-[1] pb-20">
                 <div className="flex flex-[1.7] flex-col z-10">
@@ -183,15 +184,15 @@ export default function Projects() {
                     src={props.projectScreenshot}
                     alt="Project Pic"
                 />
-                <div className="h-[200px] flex flex-col justify-between px-4 pt-3 pb-[14px]">
+                <div className="h-[210px] flex flex-col justify-between px-4 pt-3 pb-[14px]">
                     <div>
                         <p className="text-[14px] text-[#6B8BFF]">
                             {props.projectType}
                         </p>
-                        <p className="text-[18px] font-bold">
+                        <p className="text-[18px] font-bold pb-2">
                             {props.projectName}
                         </p>
-                        <p className="text-[14px]">{props.projectText}</p>
+                        <p className="text-[13px]">{props.projectText}</p>
                     </div>
                     <div className="ProjectLinks space-x-2">
                         {props.projectLinks.map((link, i) => (
@@ -205,7 +206,7 @@ export default function Projects() {
         function Link(props: { name: string; link: string }) {
             if (props.name !== undefined || props.name !== "" || props.link !== undefined || props.link !== "") {
                 return (
-                    <button className="h-[26px] px-3 bg-[#3B61F8] rounded text-[12px] font-semibold">
+                    <button className="h-[26px] px-3 bg-[#3B61F8] rounded text-[12px] font">
                         {props.name}
                     </button>
                 );
