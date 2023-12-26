@@ -16,22 +16,14 @@ export default function Home() {
                 w-[80%]  max-w-[1400px] px-14"
             >
                 <div
-                    id="leftContent"
+                    id="leftHomeContent"
                     className="flex flex-col text-left space-y-3 w-[500px] flex-shrink-0"
                 >
                     <p className="text-3xl text-[#3B61F8]">Jesse Germain</p>
-                    <div className="text-4xl font-bold">
-                        <div className="pb-4">
-                            <div className="flex">
-                                <p>Full Stack Developer</p>
-                                <p className="text-[#3B61F8]">&nbsp;&</p>
-                            </div>
-                            <p className="flex text-[#3B61F8]">
-                                {/* Website Designer */}
-                                Software Developer
-                            </p>
-                        </div>
-                    </div>
+                    <h1 className="text-4xl font-bold pb-4">
+                        Full Stack Developer 
+                        <span className="text-[#3B61F8]">&nbsp;&<br/>Software Developer</span>
+                    </h1>
                     <p>
                         As a Full Stack Developer and Software Engineer, I'm
                         passionate about creating functional and user-friendly
@@ -59,8 +51,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div id="rightContent" className="flex flex-shrink-0">
-                    {/* Test */}
+                <div id="rightHomeContent" className="flex flex-shrink-0">
                     <img
                         src={ProgrammerSVG}
                         className="min-w-[500px] pointer-events-none select-none"
