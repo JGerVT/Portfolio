@@ -13,10 +13,10 @@ export function Education() {
             backgroundColor="#121723"
             paddingY="100px"
         >
-            <div className="flex flex-1 space-x-20 justify-between">
+            <div className="flex flex-1 space-x-20 justify-between max-[1400px]:space-x-10 max-[1000px]:flex-col space-y-4 max-[1000px]:space-x-0">
                 <div
                     id="EducationCourseWork"
-                    className="flex flex-[1.7] flex-col"
+                    className="flex flex-[1.7] flex-col max-[1400px]:flex-[1.1]"
                 >
                     <p className="text-lg text-[#5594F2]">Education</p>
                     <p className="text-2xl text-white font-semibold pb-4">
@@ -50,7 +50,7 @@ function Degrees() {
                 <p className="text-white font-bold text-xl">Degrees</p>
             </div>
 
-            <div className="flex flex-1 flex-col justify-between mb-4 z-10">
+            <div className="flex flex-1 flex-col justify-between mb-4 z-10 max-[1000px]:space-y-4">
                 <Degree
                     CollegeIcon={Champlain_College_seal}
                     CollegeName="Champlain College"

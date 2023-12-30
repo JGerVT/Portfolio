@@ -32,26 +32,28 @@ export default function Home() {
                         experienced professionals in the field.
                     </p>
 
-                    <div id="buttons" className="flex space-x-8 pt-8">
-                        <div
+                    <div id="homeButtons" className="flex space-x-8 pt-8">
+                        <button
                             className="w-[150px] h-[45px]  h-50px text-center flex justify-center items-center rounded-full bg-[#3B61F8] cursor-pointer"
                             onClick={() => {
                                 SmoothScrollToElement("Contact");
                             }}
                         >
                             Contact Me
-                        </div>
-                        <div
+                        </button>
+                        <button
                             className="w-[150px] h-[45px] h-50px text-center flex justify-center items-center rounded-full border border-[#3B61F8]  cursor-pointer"
                             onClick={() => {
                                 SmoothScrollToElement("Projects");
                             }}
                         >
                             View Projects
-                        </div>
+                        </button>
                     </div>
                 </div>
-                <div id="rightHomeContent" className="flex flex-shrink-0">
+
+
+                <div id="rightHomeContent" className="flex flex-shrink-0 max-[1400px]:invisible">
                     <img
                         src={ProgrammerSVG}
                         className="min-w-[500px] pointer-events-none select-none"

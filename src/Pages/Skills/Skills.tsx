@@ -11,12 +11,12 @@ const SkillsData = {
         { header: "Design", needsPaddingTop: true },
         { name: "Adobe Xd", amt: 80 },
         { name: "Figma", amt: 45 },
-        { name: "Affinity Designer", amt: 25 },
+        // { name: "Affinity Designer", amt: 25 },
     ],
     rightSection: [
         { header: "Programming" },
-        { name: "Python", amt: 60 },
-        { name: "PyQt", amt: 65 },
+        { name: "Python / PyQt", amt: 60 },
+        // { name: "PyQt", amt: 65 },
         { name: "C#", amt: 40 },
         { name: "C/C++", amt: 25 },
         { name: "Java", amt: 30 },
@@ -63,7 +63,8 @@ export default function Skills() {
             <div className="flex flex-1 flex-col text-left pb-[15px]">
                 <p className="text-lg text-[#5594F2]">Skills</p>
                 <div>
-                    <div id="SkillsContainer" className=" flex space-x-20">
+                    <div id="SkillsContainer" className=" flex space-x-20 
+                        max-[1000px]:flex-col max-[1000px]:space-x-0 max-[1000px]:space-y-6">
                         <div className="leftContainer flex flex-1 flex-col ">
                             {CreateSkills(SkillsData.leftSection)}
                         </div>
@@ -71,7 +72,11 @@ export default function Skills() {
                             {CreateSkills(SkillsData.rightSection)}
                         </div>
                     </div>
-                    <p className="absolute text-[14px] text-gray-500 mt-4">* These percentages reflect subjective self-assessments of my current skill levels and are not based on any standardized metric.</p>
+                    <p className="absolute text-[14px] text-gray-500 mt-4">
+                        * These percentages reflect subjective self-assessments
+                        of my current skill levels and are not based on any
+                        standardized metric.
+                    </p>
                 </div>
             </div>
         </ParentSection>
@@ -91,14 +96,11 @@ export default function Skills() {
         );
     }
 
-    function Skill(props: {
-        skillName: string;
-        skillAmt: number;
-    }) {
+    function Skill(props: { skillName: string; skillAmt: number }) {
         return (
             <div className="Skill text-white space-y-2 mb-4">
                 <div className="flex justify-between">
-                    <p className="text-gray-300" >{props.skillName}</p>
+                    <p className="text-gray-300">{props.skillName}</p>
                     <p className="text-gray-300">{props.skillAmt}%</p>
                 </div>
                 <div className="w-full h-[8px] bg-[#262F47] rounded-full">

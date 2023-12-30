@@ -13,7 +13,7 @@ export default function Footer() {
             backgroundColor="black"
         >
             <div className="flex flex-1">
-                <div className="flex flex-1 h-[250px] justify-between">
+                <div className="flex flex-1 h-[250px] justify-between max-[1000px]:flex-col max-[1000px]:h-auto max-[1000px]:space-y-6">
                     <Logo />
                     <Sitemap />
                     <Resources />
@@ -25,7 +25,7 @@ export default function Footer() {
 
     function Logo() {
         return (
-            <div className="flex items-start text-white space-x-4 border-r pr-[140px] border-white border-opacity-20 pt-2">
+            <div className="flex items-start text-white space-x-4 border-r pr-[140px] border-white border-opacity-20 pt-2  max-[1000px]:pr:0 max-[1000px]:border-opacity-0">
                 <img src={LogoSVG} alt="Logo" className="w-[38px]" />
                 <div className="mt-[2px] pl-1">
                     <p className="text-[20px] leading-3">Jesse</p>
@@ -37,7 +37,7 @@ export default function Footer() {
 
     function Sitemap() {
         return (
-            <div className="flex items-start text-gray-300 space-x-4 ml-6  pt-2">
+            <div className="flex items-start text-gray-300 space-x-4 ml-6  pt-2 max-[1000px]:ml-0">
                 <div className="mt-1 pl-2">
                     <p className="text-blue-500">Sitemap</p>
                     <p
@@ -94,7 +94,7 @@ export default function Footer() {
     }
     function Resources() {
         return (
-            <div className="flex items-start text-gray-300 space-x-4 ml-6  pt-2">
+            <div className="flex items-start text-gray-300 space-x-4 ml-6  pt-2 max-[1000px]:ml-0">
                 <div className="mt-1 pl-2 flex flex-col">
                     <p className="text-blue-500">Attributions</p>
                     <a
@@ -119,7 +119,7 @@ export default function Footer() {
 
     function Links() {
         return (
-            <div className="flex flex-col items-start text-gray-300 space-y-4 cursor-pointer ml-6  pt-2">
+            <div className="flex flex-col items-start text-gray-300 space-y-4 cursor-pointer ml-6  pt-2 max-[1000px]:ml-0 max-[1000px]:flex-row max-[1000px]:space-y-0 max-[1000px]:space-x-6">
                 <a
                     className="w-[48px] h-[48px] rounded-full border-2 border-[#3b61f8] flex justify-center items-center"
                     href="https://www.linkedin.com/in/jesse-germain-a6351126b/"

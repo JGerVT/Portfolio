@@ -13,9 +13,9 @@ export default function Contact() {
             backgroundColor="#121723"
             paddingY="80px"
         >
-            <div className="flex flex-1 flex-col text-white mb-16">
+            <div className="flex flex-1 flex-col text-white mb-8">
                 <ContactHeader />
-                <div className="flex space-x-10">
+                <div className="flex space-x-10 max-[1000px]:flex-col max-[1000px]:space-y-6 max-[1000px]:space-x-0">
                     <ContactForm />
                     <ContactMeInfo />
                 </div>
@@ -66,7 +66,7 @@ const ContactInfoData = [
 
 function ContactMeInfo() {
     return (
-        <div className="relative h-[400px] overflow-hidden flex flex-col flex-1 max-w-[300px] min-w-[300px] bg-[#0e233c] rounded-lg px-6 py-4 space-y-4">
+        <div className="relative h-[400px] overflow-hidden flex flex-col flex-1 min-[1000px]:max-w-[300px] min-w-[300px] bg-[#0e233c] rounded-lg px-6 py-4 space-y-4 min-h-[250px]">
             <p className="text-[24px] font-semibold">Contact Me</p>
             {ContactInfoData.map((data, i) => (
                 <ContactLink

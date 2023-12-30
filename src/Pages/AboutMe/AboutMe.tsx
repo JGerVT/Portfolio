@@ -13,16 +13,19 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function AboutMe() {
     return (
         <ParentSection sectionID="About">
+            <div className="flex justify-between space-x-14 max-[1000px]:flex-col">
+
                 <div id="LeftAboutSection" className="self-center">
                     <AboutMeProfilePicture />
                 </div>
                 <div
                     id="RightAboutSection"
                     className="text-left w-[680px] space-y-[50px] self-center pb-1"
-                >
+                    >
                     <AboutMeInfo />
                     <AboutMeLinks />
                     <AboutMeInterests />
+                </div>
                 </div>
         </ParentSection>
     );
@@ -34,7 +37,7 @@ function AboutMeProfilePicture() {
             <img
                 src={Placeholder}
                 alt="Profile"
-                className="w-[360px] h-[460px] object-cover object-center"
+                className="w-[360px] h-[460px] object-cover object-center max-[1000px]:h-[300px] max-[1000px]:w-[250px]"
             />
 
             <div className="absolute top-0 left-0 h-[50px] w-[50px] border-l-2 border-t-2 border-[#3b61f8] " />
@@ -46,8 +49,12 @@ function AboutMeProfilePicture() {
 function AboutMeInfo() {
     return (
         <div id="AboutMeInfo">
+
             <p className="text-lg text-[#5594F2]">Info</p>
             <p className="text-2xl text-white font-semibold pb-4">About Me</p>
+            {/* <div className="flex self-center min-[1000px]:hidden pb-5 justify-center">
+                <AboutMeProfilePicture />
+            </div> */}
             <p className="text-white text-base">
             From my years of personal programming experience, I bring hands-on experience in designing responsive and dynamic user interfaces using cutting-edge technologies such as React and PyQt. My programming experience spans across Python, Java, and C#, and I have extensive experience managing data through SQL and JSON databases. Additionally, I have experience crafting user-friendly interfaces, leveraging tools such as Adobe Xd and Figma.
             </p>
@@ -128,7 +135,7 @@ function AboutMeInterests() {
             <p className="text-lg text-white font-semibold pb-4">
                 My Interests
             </p>
-            <div className="flex justify-between">
+            <div className="flex justify-between max-[1400px]:flex-col space-y-4">
                 {AboutMeData.map((data, i) => (
                     <AboutMeInterest
                         icon={data.icon}
