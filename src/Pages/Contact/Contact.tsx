@@ -11,11 +11,11 @@ export default function Contact() {
         <ParentSection
             sectionID="Contact"
             backgroundColor="#121723"
-            paddingY="80px"
+            paddingY="0px"
         >
-            <div className="flex flex-1 flex-col text-white mb-8">
+            <div className="flex flex-1 flex-col text-white mb-8 py-[80px] max-sm:py-[35px]">
                 <ContactHeader />
-                <div className="flex space-x-10 max-[1000px]:flex-col max-[1000px]:space-y-6 max-[1000px]:space-x-0">
+                <div className="flex space-x-10 max-[1000px]:flex-col max-[1000px]:space-y-12 max-[1000px]:space-x-0">
                     <ContactForm />
                     <ContactMeInfo />
                 </div>

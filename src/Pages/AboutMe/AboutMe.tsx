@@ -12,32 +12,32 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export default function AboutMe() {
     return (
-        <ParentSection sectionID="About">
-            <div className="flex justify-between max-lg:flex-col">
-
+        <ParentSection sectionID="About" paddingY="0px">
+            <div className="flex justify-between py-[100px] pt-[50px]
+                    max-lg:flex-col max-lg:py-[35px]">
                 <div id="LeftAboutSection" className="self-center lg:pr-16">
                     <AboutMeProfilePicture />
                 </div>
                 <div
                     id="RightAboutSection"
                     className="text-left max-w-[680px] space-y-[50px] pb-1"
-                    >
+                >
                     <AboutMeInfo />
                     <AboutMeLinks />
                     <AboutMeInterests />
                 </div>
-                </div>
+            </div>
         </ParentSection>
     );
 }
 
 function AboutMeProfilePicture() {
     return (
-        <div className="relative overflow-hidden p-3 min-w-[250px]">
+        <div className="relative overflow-hidden p-3 my-4">
             <img
                 src={Placeholder}
                 alt="Profile"
-                className="w-[360px] h-[460px] object-cover object-center max-lg:h-[300px] max-lg:w-[250px]"
+                className="min-w-[260px] w-[260px] object-cover object-center"
             />
 
             <div className="absolute top-0 left-0 h-[50px] w-[50px] border-l-2 border-t-2 border-[#3b61f8] " />
@@ -49,14 +49,20 @@ function AboutMeProfilePicture() {
 function AboutMeInfo() {
     return (
         <div id="AboutMeInfo">
-
             <p className="text-lg text-[#5594F2]">Info</p>
             <p className="text-2xl text-white font-semibold pb-4">About Me</p>
             {/* <div className="flex self-center min-[1000px]:hidden pb-5 justify-center">
                 <AboutMeProfilePicture />
             </div> */}
             <p className="text-white text-base">
-            From my years of personal programming experience, I bring hands-on experience in designing responsive and dynamic user interfaces using cutting-edge technologies such as React and PyQt. My programming experience spans across Python, Java, and C#, and I have extensive experience managing data through SQL and JSON databases. Additionally, I have experience crafting user-friendly interfaces, leveraging tools such as Adobe Xd and Figma.
+                From my years of personal programming experience, I bring
+                hands-on experience in designing responsive and dynamic user
+                interfaces using cutting-edge technologies such as React and
+                PyQt. My programming experience spans across Python, Java, and
+                C#, and I have extensive experience managing data through SQL
+                and JSON databases. Additionally, I have experience crafting
+                user-friendly interfaces, leveraging tools such as Adobe Xd and
+                Figma.
             </p>
         </div>
     );
@@ -65,7 +71,7 @@ function AboutMeInfo() {
 function AboutMeLinks() {
     const AboutMeData = [
         {
-            icon: <IoLocationSharp  color="white" size={"23px"} />,
+            icon: <IoLocationSharp color="white" size={"23px"} />,
             name: "Location",
             value: "USA, Vermont",
         },
@@ -135,7 +141,7 @@ function AboutMeInterests() {
             <p className="text-lg text-white font-semibold pb-4">
                 My Interests
             </p>
-            <div className="flex justify-between max-lg:flex-col max-lg:space-y-4">
+            <div className="flex justify-between max-xl:flex-col max-xl:space-y-4">
                 {AboutMeData.map((data, i) => (
                     <AboutMeInterest
                         icon={data.icon}

@@ -11,9 +11,11 @@ export function Education() {
         <ParentSection
             sectionID="Education"
             backgroundColor="#121723"
-            paddingY="100px"
+            paddingY="0px"
         >
-            <div className="flex flex-1 space-x-20 justify-between max-[1400px]:space-x-10 max-lg:flex-col max-lg:space-y-4 max-lg:space-x-0">
+            <div className="flex flex-1 space-x-20 justify-between max-[1400px]:space-x-10 max-lg:flex-col max-lg:space-y-16 max-lg:space-x-0
+                py-[112px] max-sm:py-[35px]
+            ">
                 <div
                     id="EducationCourseWork"
                     className="flex flex-[1.7] flex-col max-[1400px]:flex-[1.1]"
@@ -34,7 +36,7 @@ function Degrees() {
     return (
         <div
             id="EducationDegrees"
-            className="relative flex flex-1 min-h-[420px] rounded-lg bg-[#0E233C] p-6 flex-col overflow-hidden pointer-events-none max-lg:flex-auto"
+            className="relative flex flex-1 sm:min-h-[460px]  rounded-lg bg-[#0E233C] p-6 flex-col overflow-hidden pointer-events-none max-sm:flex-auto"
         >
             <img
                 src={DegreesBlob}

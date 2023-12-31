@@ -105,7 +105,7 @@ function CreateCourseWork(props: { courseData: CourseData }) {
                                         </p>
                                     )}
 
-                                    <p className="pl-6">
+                                    <p className="pl-6 max-sm:hidden">
                                         {courseData_.courseTime}
                                     </p>
                                 </div>

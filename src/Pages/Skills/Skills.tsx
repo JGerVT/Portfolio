@@ -59,8 +59,8 @@ export default function Skills() {
     }
 
     return (
-        <ParentSection sectionID="Skills" paddingY="90px">
-            <div className="flex flex-1 flex-col text-left pb-[15px]">
+        <ParentSection sectionID="Skills" paddingY="0px">
+            <div className="flex flex-1 flex-col text-left py-[90px] max-sm:py-[40px]">
                 <p className="text-lg text-[#5594F2]">Skills</p>
                 <div>
                     <div id="SkillsContainer" className=" flex space-x-20 
@@ -72,7 +72,7 @@ export default function Skills() {
                             {CreateSkills(SkillsData.rightSection)}
                         </div>
                     </div>
-                    <p className="absolute text-[14px] text-gray-500 mt-4">
+                    <p className="text-[14px] text-gray-500 mt-4">
                         * These percentages reflect subjective self-assessments
                         of my current skill levels and are not based on any
                         standardized metric.

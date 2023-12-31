@@ -123,7 +123,7 @@ export default function Projects() {
                     <div
                         ref={GameContainer}
                         id="ProjectsContainer"
-                        className="w-full flex space-x-[47px] overflow-x-hidden overflow-y-hidden pb-4"
+                        className="container w-full flex space-x-[47px] overflow-x-scroll overflow-y-hidden pb-4"
                     >
                         {projectsData.map((data, i) => (
                             <Project

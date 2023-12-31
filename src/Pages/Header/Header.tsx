@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 export default function Header() {
     return (
         <nav className="fixed flex h-16 justify-center items-center bg-black w-full top-0 z-50">
-            <div className="flex px-10 grow h-full">
+            <div className="flex px-10 grow h-full max-sm:px-4 justify-between">
                 <LeftLogo />
                 <ul className=" text-gray-300 h-full hidden lg:flex">
                     <LinksSection />
@@ -21,10 +21,8 @@ function LinksSectionDropDown() {
     const [isCollapsed, setIsCollapsed] = useState(true);
 
     return (
-        <div className="hidden max-lg:flex">
-            <button className="" onClick={()=>{setIsCollapsed(!isCollapsed)}}>
-                <GiHamburgerMenu color="#3B61F8" size={"20px"} />
-            </button>
+        <button className="hidden max-lg:flex w-[40px] justify-center items-center" onClick={()=>{setIsCollapsed(!isCollapsed)}}>
+            <GiHamburgerMenu color="#3B61F8" size={"20px"} />
             <div className="dropdownWrapper absolute top-full right-0 grid transition-all ease-in-out duration-200"
                 style={{ gridTemplateRows: !isCollapsed ? "1fr" : "0fr" }}
             >
@@ -35,7 +33,7 @@ function LinksSectionDropDown() {
                     </ul>
                 </div>
             </div>
-        </div>
+        </button>
     );
 }
 
@@ -140,7 +138,7 @@ function Links(props: { title: string; selectedNav: string }) {
 function LeftLogo() {
     return (
         <div
-            className="flex grow text-white items-center space-x-4 cursor-pointer"
+            className="flex text-white items-center space-x-4"
             onClick={() => {}}
         >
             <img src={Logo} alt="Logo" className="w-[38px]" />
