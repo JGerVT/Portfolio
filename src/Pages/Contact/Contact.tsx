@@ -66,7 +66,7 @@ const ContactInfoData = [
 
 function ContactMeInfo() {
     return (
-        <div className="relative h-[400px] overflow-hidden flex flex-col flex-1 min-[1000px]:max-w-[300px] min-w-[300px] bg-[#0e233c] rounded-lg px-6 py-4 space-y-4 min-h-[250px]">
+        <div className="relative h-[400px] overflow-hidden flex flex-col flex-1 min-[1000px]:max-w-[300px] min-w-[250px] bg-[#0e233c] rounded-lg px-6 py-4 space-y-4 min-h-[250px]">
             <p className="text-[24px] font-semibold">Contact Me</p>
             {ContactInfoData.map((data, i) => (
                 <ContactLink
@@ -92,7 +92,7 @@ function ContactMeInfo() {
     }) {
         return (
             <div
-                className="flex space-x-4 items-center text-[14px] overflow-hidden"
+                className="flex space-x-4 items-center text-[14px] overflow-hidden z-10"
                 style={{ cursor: props.link !== "" ? "cursor-pointer" : "" }}
             >
                 {props.icon}
@@ -132,10 +132,10 @@ function ContactForm() {
 
     return (
         <form
-            className="flex-1 grid grid-cols-2 gap-x-10 gap-y-3"
+            className="flex-1 grid grid-cols-2 gap-x-5 gap-y-3 "
             onSubmit={onSubmit}
         >
-            <div style={{ gridColumn: "span 1" }}>
+            <div className="col-span-1 max-md:col-span-2">
                 <p className="text-white pb-2 pl-3">Name</p>
                 <input
                     value={name}
@@ -145,7 +145,7 @@ function ContactForm() {
                     className="w-full rounded  bg-black h-10 px-4"
                 />
             </div>
-            <div style={{ gridColumn: "span 1" }}>
+            <div className="col-span-1 max-md:col-span-2">
                 <p className="text-white pb-2 pl-3">Email</p>
                 <input
                     value={email}

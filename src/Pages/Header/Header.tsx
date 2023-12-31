@@ -144,7 +144,7 @@ function LeftLogo() {
             onClick={() => {}}
         >
             <img src={Logo} alt="Logo" className="w-[38px]" />
-            <div className="flex space-x-[5px] pb-1">
+            <div className="flex space-x-[5px] pb-1 max-[350px]:hidden">
                 <p className="text-[20px]">Jesse</p>
                 <p className="text-[20px] text-blue-500">Germain</p>
             </div>

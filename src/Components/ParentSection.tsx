@@ -21,7 +21,7 @@ export default function ParentSection(props: {
                     props.paddingY !== undefined ? props.paddingY : "112px",
             }}
         >
-            <div className="max-w-[1400px] px-14 w-[80%] flex flex-1 justify-between">
+            <div className="max-w-[1400px] px-14 w-[90%] max-lg:w-[100%] justify-between">
                 {props.children}
             {/* Background Image */}
             {props.backgroundIMG !== undefined && (

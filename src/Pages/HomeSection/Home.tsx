@@ -2,22 +2,26 @@ import React from "react";
 import { HomeBackground } from "./HomeBackground";
 import ProgrammerSVG from "../../Resources/ProgrammerSVG.svg";
 import { SmoothScrollToElement } from "../../Utility/utility";
+import ParentSection from "../../Components/ParentSection";
 
 export default function Home() {
     return (
         <div
             id="Home"
-            className="w-full relative max-w-[1920px] h-[100vh] min-h-[600px] max-h-[980px] bg-[#121723] pt-16 overflow-hidden items-center object-center justify-center"
+            className="w-full relative max-w-[1920px] h-[100vh] min-h-[600px] max-h-[980px] bg-[#121723] overflow-hidden"
         >
             <HomeBackground />
-            <div
+            {/* <div
                 id="Content"
-                className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex text-white z-10 justify-between 
+                className="flex text-white z-10 justify-between 
                 w-[80%]  max-w-[1400px] px-14"
-            >
+            > */}
+            <div className="flex h-full items-center">
+            <ParentSection sectionID="HomeSection" key={"Home"} >
+                <div className="flex justify-between">
                 <div
                     id="leftHomeContent"
-                    className="flex flex-col text-left space-y-3 w-[500px] flex-shrink-0"
+                    className="flex flex-col text-left space-y-3 max-w-[500px] z-10 text-white overflow-hidden"
                 >
                     <p className="text-3xl text-[#3B61F8]">Jesse Germain</p>
                     <h1 className="text-4xl font-bold pb-4">
@@ -32,9 +36,9 @@ export default function Home() {
                         experienced professionals in the field.
                     </p>
 
-                    <div id="homeButtons" className="flex space-x-8 pt-8">
+                    <div id="homeButtons" className="flex space-x-8 pt-8 max-[450px]:flex-col max-[450px]:space-x-0 max-[450px]:space-y-4 ">
                         <button
-                            className="w-[150px] h-[45px]  h-50px text-center flex justify-center items-center rounded-full bg-[#3B61F8] cursor-pointer"
+                            className="min-w-[150px] h-[45px]  h-50px text-center flex justify-center items-center rounded-full bg-[#3B61F8] cursor-pointer"
                             onClick={() => {
                                 SmoothScrollToElement("Contact");
                             }}
@@ -42,7 +46,7 @@ export default function Home() {
                             Contact Me
                         </button>
                         <button
-                            className="w-[150px] h-[45px] h-50px text-center flex justify-center items-center rounded-full border border-[#3B61F8]  cursor-pointer"
+                            className="min-w-[150px]  h-[45px] h-50px text-center flex justify-center items-center rounded-full border border-[#3B61F8]  cursor-pointer"
                             onClick={() => {
                                 SmoothScrollToElement("Projects");
                             }}
@@ -53,14 +57,17 @@ export default function Home() {
                 </div>
 
 
-                <div id="rightHomeContent" className="flex flex-shrink-0 max-[1400px]:invisible">
+                <div id="rightHomeContent" className="flex flex-shrink-0 max-[1400px]:hidden z-10">
                     <img
                         src={ProgrammerSVG}
                         className="min-w-[500px] pointer-events-none select-none"
                         alt="Programmer Icon"
                     />
                 </div>
+                </div>
+            </ParentSection>
             </div>
+            {/* </div> */}
         </div>
     );
 }

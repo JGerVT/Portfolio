@@ -42,10 +42,10 @@ export function HomeBackground() {
         <div
             ref={ContainerRef}
             id="Background"
-            className="relative flex z-0 pointer-events-none select-none h-full overflow-hidden"
-            style={{ transform: "translate(-50%)", left: "50%" }}
+            className="absolute left-0 top-0 right-0 bottom-0 flex z-0 pointer-events-none select-none h-full overflow-hidden"
         >
             <div className="relative">
+                <div className=" translate-x-[-170px] translate-y-[80px]">
                 <div
                     id="Back-IMG"
                     className={`absolute`}
@@ -86,6 +86,7 @@ export function HomeBackground() {
                         alt=""
                         className="max-w-none absolute top-[-120px] left-[220px] scale-[83%]  pointer-events-none"
                     />
+                </div>
                 </div>
 
                 <img

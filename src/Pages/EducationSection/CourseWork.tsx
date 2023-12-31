@@ -55,7 +55,7 @@ function AccordionWrapper(props: { courseData: CourseData; index: number }) {
                 onClick={() => {
                     setIsCollapsed(!isCollapsed);
                 }}
-                className="relative flex px-1 space-x-4 items-center w-full h-[48px] cursor-pointer select-none overflow-hidden"
+                className="relative flex px-1 space-x-4 items-center w-full h-[48px] cursor-pointer select-none overflow-hidden shrink-0"
             >
                 <img
                     src={AccordionBlob}
@@ -64,6 +64,7 @@ function AccordionWrapper(props: { courseData: CourseData; index: number }) {
                     style={{ top: `${-150 - props.index * 58}px` }}
                 />
                 <FaChevronDown
+                    className="shrink-0"
                     color="white"
                     style={{
                         transform: isCollapsed
@@ -71,7 +72,7 @@ function AccordionWrapper(props: { courseData: CourseData; index: number }) {
                             : "rotate(0deg)",
                     }}
                 />
-                <p className="text-white text-[17px] font-semibold z-10">
+                <p className="text-white text-[17px] font-semibold z-10 whitespace-nowrap max-[450px]:text-[15px]">
                     {props.courseData.name}
                 </p>
             </div>

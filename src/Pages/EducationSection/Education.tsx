@@ -13,7 +13,7 @@ export function Education() {
             backgroundColor="#121723"
             paddingY="100px"
         >
-            <div className="flex flex-1 space-x-20 justify-between max-[1400px]:space-x-10 max-[1000px]:flex-col space-y-4 max-[1000px]:space-x-0">
+            <div className="flex flex-1 space-x-20 justify-between max-[1400px]:space-x-10 max-lg:flex-col max-lg:space-y-4 max-lg:space-x-0">
                 <div
                     id="EducationCourseWork"
                     className="flex flex-[1.7] flex-col max-[1400px]:flex-[1.1]"
@@ -34,7 +34,7 @@ function Degrees() {
     return (
         <div
             id="EducationDegrees"
-            className="relative flex flex-1 h-[420px] rounded-lg bg-[#0E233C] p-6 flex-col overflow-hidden pointer-events-none"
+            className="relative flex flex-1 min-h-[420px] rounded-lg bg-[#0E233C] p-6 flex-col overflow-hidden pointer-events-none max-lg:flex-auto"
         >
             <img
                 src={DegreesBlob}
@@ -92,15 +92,15 @@ function Degrees() {
                         <p className="font-bold">{props.CollegeName}</p>
                     </div>
                     <p className="text-gray-300">{props.Date}</p>
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 max-sm:flex-col max-sm:space-x-0">
                         <p className="font-bold w-[70px]">Degree</p>
                         <p className="text-gray-300">{props.Degree}</p>
                     </div>
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 max-sm:flex-col max-sm:space-x-0">
                         <p className="font-bold w-[70px]">Major</p>
                         <p className="text-gray-300">{props.Major}</p>
                     </div>
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 max-sm:flex-col max-sm:space-x-0">
                         <p className="font-bold w-[70px]">GPA</p>
                         <p className="text-gray-300">{props.GPA}</p>
                     </div>

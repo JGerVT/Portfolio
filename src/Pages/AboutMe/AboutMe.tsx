@@ -13,14 +13,14 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function AboutMe() {
     return (
         <ParentSection sectionID="About">
-            <div className="flex justify-between space-x-14 max-[1000px]:flex-col">
+            <div className="flex justify-between max-lg:flex-col">
 
-                <div id="LeftAboutSection" className="self-center">
+                <div id="LeftAboutSection" className="self-center lg:pr-16">
                     <AboutMeProfilePicture />
                 </div>
                 <div
                     id="RightAboutSection"
-                    className="text-left w-[680px] space-y-[50px] self-center pb-1"
+                    className="text-left max-w-[680px] space-y-[50px] pb-1"
                     >
                     <AboutMeInfo />
                     <AboutMeLinks />
@@ -33,11 +33,11 @@ export default function AboutMe() {
 
 function AboutMeProfilePicture() {
     return (
-        <div className="relative overflow-hidden p-3">
+        <div className="relative overflow-hidden p-3 min-w-[250px]">
             <img
                 src={Placeholder}
                 alt="Profile"
-                className="w-[360px] h-[460px] object-cover object-center max-[1000px]:h-[300px] max-[1000px]:w-[250px]"
+                className="w-[360px] h-[460px] object-cover object-center max-lg:h-[300px] max-lg:w-[250px]"
             />
 
             <div className="absolute top-0 left-0 h-[50px] w-[50px] border-l-2 border-t-2 border-[#3b61f8] " />
@@ -107,7 +107,7 @@ function AboutMeLinks() {
         value: string;
     }) {
         return (
-            <div className="flex">
+            <div className="flex max-[400px]:flex-col">
                 <div className="flex w-[150px] items-center space-x-4">
                     {props.icon}
                     <p className="text-white">{props.name}</p>
@@ -135,7 +135,7 @@ function AboutMeInterests() {
             <p className="text-lg text-white font-semibold pb-4">
                 My Interests
             </p>
-            <div className="flex justify-between max-[1400px]:flex-col space-y-4">
+            <div className="flex justify-between max-lg:flex-col max-lg:space-y-4">
                 {AboutMeData.map((data, i) => (
                     <AboutMeInterest
                         icon={data.icon}
