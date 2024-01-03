@@ -13,14 +13,16 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function AboutMe() {
     return (
         <ParentSection sectionID="About" paddingY="0px">
-            <div className="flex justify-between py-[100px] pt-[50px]
-                    max-lg:flex-col max-lg:py-[35px]">
+            <div
+                className="flex justify-between py-[100px] pt-[50px]
+                    max-lg:flex-col max-lg:py-[35px]"
+            >
                 <div id="LeftAboutSection" className="self-center lg:pr-16">
                     <AboutMeProfilePicture />
                 </div>
                 <div
                     id="RightAboutSection"
-                    className="text-left max-w-[680px] space-y-[50px] pb-1"
+                    className="text-left max-w-[800px] space-y-[50px] pb-1"
                 >
                     <AboutMeInfo />
                     <AboutMeLinks />
@@ -37,7 +39,7 @@ function AboutMeProfilePicture() {
             <img
                 src={Placeholder}
                 alt="Profile"
-                className="min-w-[260px] w-[260px] object-cover object-center"
+                className="min-w-[270px] w-[270px] object-cover object-center"
             />
 
             <div className="absolute top-0 left-0 h-[50px] w-[50px] border-l-2 border-t-2 border-[#3b61f8] " />
@@ -74,21 +76,25 @@ function AboutMeLinks() {
             icon: <IoLocationSharp color="white" size={"23px"} />,
             name: "Location",
             value: "USA, Vermont",
+            link: "",
         },
         {
             icon: <MdOutlineEmail color="white" size={"23px"} />,
             name: "Email",
-            value: "email123@gmail.com",
+            value: "JGermainContact@gmail.com",
+            link: "mailto:JGermainContact@gmail.com",
         },
         {
             icon: <CiLinkedin color="white" size={"23px"} />,
             name: "LinkedIn",
             value: "Jesse Germain",
+            link: "https://www.linkedin.com/in/jesse-germain-a6351126b/",
         },
         {
             icon: <VscGithub color="white" size={"23px"} />,
             name: "GitHub",
             value: "JGVT",
+            link: "https://github.com/JGerVT",
         },
     ];
 
@@ -101,6 +107,7 @@ function AboutMeLinks() {
                         icon={data.icon}
                         name={data.name}
                         value={data.value}
+                        link={data.link}
                     />
                 ))}
             </div>
@@ -111,6 +118,7 @@ function AboutMeLinks() {
         icon: React.JSX.Element;
         name: string;
         value: string;
+        link: string;
     }) {
         return (
             <div className="flex max-[400px]:flex-col">
@@ -118,9 +126,18 @@ function AboutMeLinks() {
                     {props.icon}
                     <p className="text-white">{props.name}</p>
                 </div>
-                <a className="text-[#5594F2]" href="https://">
-                    {props.value}
-                </a>
+                {props.link !== "" ? (
+                    <a
+                        className="text-[#5594F2]"
+                        href={props.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {props.value}
+                    </a>
+                ) : (
+                    <p className="text-[#5594F2]">{props.value}</p>
+                )}
             </div>
         );
     }

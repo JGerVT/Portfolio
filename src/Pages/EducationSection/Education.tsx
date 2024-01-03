@@ -14,7 +14,7 @@ export function Education() {
             paddingY="0px"
         >
             <div className="flex flex-1 space-x-20 justify-between max-[1400px]:space-x-10 max-lg:flex-col max-lg:space-y-16 max-lg:space-x-0
-                py-[112px] max-sm:py-[35px]
+                py-[90px] max-sm:py-[35px]
             ">
                 <div
                     id="EducationCourseWork"

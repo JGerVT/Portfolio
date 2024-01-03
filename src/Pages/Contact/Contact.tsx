@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ParentSection from "../../Components/ParentSection";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import ContactBlob from "../../Resources/ContactBlob.svg";
 import { IoLocationSharp } from "react-icons/io5";
-import { BsFillSendFill } from "react-icons/bs";
+import { ContactForm } from "./ContactForm";
 
 export default function Contact() {
     return (
@@ -13,7 +13,7 @@ export default function Contact() {
             backgroundColor="#121723"
             paddingY="0px"
         >
-            <div className="flex flex-1 flex-col text-white mb-8 py-[80px] max-sm:py-[35px]">
+            <div className="flex flex-1 flex-col text-white mb-8 py-[50px] max-sm:py-[35px]">
                 <ContactHeader />
                 <div className="flex space-x-10 max-[1000px]:flex-col max-[1000px]:space-y-12 max-[1000px]:space-x-0">
                     <ContactForm />
@@ -43,24 +43,24 @@ export default function Contact() {
 
 const ContactInfoData = [
     {
-        icon: <MdEmail size={"20px"} />,
-        text: "email123@gmail.com",
+        icon: <IoLocationSharp size={"20px"} />,
+        text: "USA, Vermont",
         link: "",
     },
     {
+        icon: <MdEmail size={"20px"} />,
+        text: "Email",
+        link: "mailto:JGermainContact@gmail.com",
+    },
+    {
         icon: <FaGithub size={"20px"} />,
-        text: "JGerVT",
+        text: "GitHub",
         link: "https://github.com/JGerVT",
     },
     {
         icon: <FaLinkedin size={"20px"} />,
-        text: "Jesse Germain",
-        link: "",
-    },
-    {
-        icon: <IoLocationSharp size={"20px"} />,
-        text: "USA, Vermont",
-        link: "",
+        text: "LinkedIn",
+        link: "https://www.linkedin.com/in/jesse-germain-a6351126b/",
     },
 ];
 
@@ -108,84 +108,4 @@ function ContactMeInfo() {
     }
 }
 
-function ContactForm() {
-    const [formData, setFormData] = useState<{
-        name: string;
-        email: string;
-        subject: string;
-        message: string;
-    }>({ name: "", email: "", subject: "", message: "" });
-    const { name, email, subject, message } = formData;
 
-    function onChange(e: any) {
-        setFormData((prevState) => ({
-            ...prevState,
-            [e.target.id]: e.target.value,
-        }));
-    }
-
-    function onSubmit(e: React.FormEvent) {
-        e.preventDefault();
-
-        console.log("Submit", formData);
-    }
-
-    return (
-        <form
-            className="flex-1 grid grid-cols-2 gap-x-5 gap-y-3 "
-            onSubmit={onSubmit}
-        >
-            <div className="col-span-1 max-md:col-span-2">
-                <p className="text-white pb-2 pl-3">Name</p>
-                <input
-                    value={name}
-                    id="name"
-                    type="text"
-                    onChange={onChange}
-                    className="w-full rounded  bg-black h-10 px-4"
-                />
-            </div>
-            <div className="col-span-1 max-md:col-span-2">
-                <p className="text-white pb-2 pl-3">Email</p>
-                <input
-                    value={email}
-                    id="email"
-                    onChange={onChange}
-                    alt="Email Input"
-                    type="email"
-                    className="w-full  rounded bg-black h-10 px-4"
-                />
-            </div>
-            <div style={{ gridColumn: "span 2" }}>
-                <p className="text-white pb-2 pl-3">Subject</p>
-                <input
-                    value={subject}
-                    id="subject"
-                    onChange={onChange}
-                    alt="Name Input"
-                    type="text"
-                    className="w-full  rounded bg-black h-10 px-4"
-                />
-            </div>
-            <div style={{ gridColumn: "span 2" }}>
-                <p className="text-white pb-2 pl-3">Message</p>
-                <textarea
-                    value={message}
-                    id="message"
-                    onChange={onChange}
-                    className="w-full  rounded bg-black h-10 px-4 min-h-[150px]  pt-1"
-                />
-            </div>
-            <button
-                className="mt-[6px] w-[150px] h-[45px]  h-50px text-center flex justify-center items-center rounded-full bg-[#3B61F8] cursor-pointer
-                    hover:brightness-110 transition-all duration-75 ease-in-out
-                "
-                type="submit"
-                onClick={() => {}}
-            >
-                <BsFillSendFill className="mr-3" />
-                <p className="font-semibold">Submit</p>
-            </button>
-        </form>
-    );
-}
