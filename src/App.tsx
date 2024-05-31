@@ -6,11 +6,11 @@ import Home from "./Pages/HomeSection/Home";
 import AboutMe from "./Pages/AboutMe/AboutMe";
 import { Education } from "./Pages/EducationSection/Education";
 import Skills from "./Pages/Skills/Skills";
-import Projects from "./Pages/PastWorks/Projects";
 import Contact from "./Pages/Contact/Contact";
 import Footer from "./Pages/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Projects from "./Pages/PastWorks/Projects";
 
 function App() {
     return (
@@ -19,9 +19,9 @@ function App() {
                 <Header />
                 <Home />
                 <AboutMe />
+                <Projects />
                 <Education />
                 <Skills />
-                <Projects />
                 <Contact />
                 <Footer />
             </div>

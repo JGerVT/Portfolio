@@ -56,12 +56,12 @@ function AboutMeInfo() {
             {/* <div className="flex self-center min-[1000px]:hidden pb-5 justify-center">
                 <AboutMeProfilePicture />
             </div> */}
-            <p className="text-white text-base">
+            <p className="text-[#c4c4c4] text-base">
                 From my years of personal programming experience, I bring
                 hands-on experience in designing responsive and dynamic user
-                interfaces using cutting-edge technologies such as React and
-                PyQt. My programming experience spans across Python, Java, and
-                C#, and I have extensive experience managing data through SQL
+                interfaces using industry standard technologies such as React and
+                Node.js. My programming experience spans across Python, Java, JS/TS and
+                C#, and I have hands on experience managing data through SQL
                 and JSON databases. Additionally, I have experience crafting
                 user-friendly interfaces, leveraging tools such as Adobe Xd and
                 Figma.

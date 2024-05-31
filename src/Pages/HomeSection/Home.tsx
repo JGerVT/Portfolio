@@ -16,20 +16,20 @@ export default function Home() {
                     <div className="flex justify-between min-h-[383px]">
                         <div
                             id="leftHomeContent"
-                            className="flex flex-col text-left space-y-3 max-w-[500px] z-10 text-white"
+                            className="flex flex-col text-left space-y-3 max-w-[520px] z-10 text-white"
                         >
-                            <p className="text-3xl text-[#3B61F8]">
-                                Jesse Germain
+                            <p className="text-2xl text-[#3B61F8]">
+                                Welcome to my Portfolio
                             </p>
                             <h1 className="text-4xl font-bold pb-4">
-                                Full Stack Developer
+                                I'm a Full Stack Developer
                                 <span className="text-[#3B61F8]">
                                     &nbsp;&
                                     <br />
                                     Software Developer
                                 </span>
                             </h1>
-                            <p>
+                            <p className="text-[#c4c4c4]">
                                 As a Full Stack Developer and Software Engineer,
                                 I'm passionate about creating functional and
                                 user-friendly applications. While I'm in the
