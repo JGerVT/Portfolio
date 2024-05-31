@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2504.188" height="2533.628" viewBox="0 0 2504.188 2533.628">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_11" data-name="Ellipse 11" cx="33" cy="33" r="33" transform="translate(0 0)" fill="#0e121b"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <circle id="Ellipse_12" data-name="Ellipse 12" cx="15" cy="15" r="15" transform="translate(0 0)" fill="#102945"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <circle id="Ellipse_21" data-name="Ellipse 21" cx="46.1" cy="46.1" r="46.1" fill="#0e121b"/>
+    </clipPath>
+  </defs>
+  <g id="Back" transform="translate(39.152 1622.217)">
+    <path id="Path_99" data-name="Path 99" d="M413.13,139.47l63.73,120.95-100.446,8.106Z" transform="translate(378.941 271.855)" fill="none" stroke="#142e4e" stroke-width="1" stroke-dasharray="4 4"/>
+    <g id="Group_34" data-name="Group 34" transform="matrix(0.7, -0.714, 0.714, 0.7, 78.363, 235.947)" clip-path="url(#clip-path)">
+      <rect id="Rectangle_36" data-name="Rectangle 36" width="132" height="132" transform="translate(-33 -33)" fill="#0e121b"/>
+    </g>
+    <g id="Group_35" data-name="Group 35" transform="matrix(0.915, -0.404, 0.404, 0.915, 1084.354, 883.969)" clip-path="url(#clip-path-2)">
+      <rect id="Rectangle_37" data-name="Rectangle 37" width="60" height="60" transform="translate(-15 -15)" fill="#102945"/>
+    </g>
+    <path id="Path_196" data-name="Path 196" d="M0,811.3c150.1-12.568,221.889-189.964,336.5-287.7,96.181-82.023,204.117-141.934,283.062-240.657,99.476-124.4,258.309-248.257,233.75-405.632C828.693-280.433,634.239-342.945,506.867-439.2,405.43-515.862,307.718-597.023,184.445-628.164,64.152-658.553-57.4-632.345-179.9-612.7c-140.123,22.474-295.937,14.456-403,107.607-111.211,96.76-143.4,252.2-175.823,396-34.729,154.053-94.608,325.714-18.011,463.813,76.3,137.557,266.361,148.719,401.967,228.43C-246.082,658.8-148.754,823.758,0,811.3" transform="matrix(-0.891, 0.454, -0.454, -0.891, 1448.33, -529.221)" fill="#0b2239" opacity="0.91"/>
+    <g id="Group_129" data-name="Group 129" transform="translate(-39.152 146.094) rotate(-46.54)" clip-path="url(#clip-path-3)">
+      <rect id="Rectangle_60" data-name="Rectangle 60" width="184.4" height="184.4" transform="translate(-46.1 -46.1)" fill="#0e121b"/>
+    </g>
+  </g>
+</svg>
