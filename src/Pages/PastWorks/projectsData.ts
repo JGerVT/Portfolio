@@ -1,6 +1,7 @@
 import InspireCanvasScreenshot from "../../Resources/SoftwareDesign/InspireCanvas.png";
 import PortfolioScreenshot from "../../Resources/SoftwareDesign/portfolioScreenshot.png";
 import HabitTracker from "../../Resources/SoftwareDesign/habitTracker.png";
+import HabitTrackerV2 from "../../Resources/SoftwareDesign/habitTrackerV2.png";
 import VGMDB from "../../Resources/SoftwareDesign/videoGameDatabase.png";
 
 export interface ProjectData {
@@ -25,6 +26,20 @@ export const projectsData: ProjectData[] = [
             {
                 name: "GitHub",
                 link: "https://github.com/JGerVT/",
+            },
+        ],
+        screenshots: [],
+    },
+    {
+        projectScreenshot: HabitTrackerV2,
+        projectType: "Software (React / Electron)",
+        projectName: "HabitTracker V2",
+        projectText:
+            "My 2nd attempt at Habit Tracker is an app that allows you to track progress for habits, while visually displaying that progress on a monthly heatmap per task.",
+        links: [
+            {
+                name: "GitHub",
+                link: "https://github.com/JGerVT/InspireCanvas",
             },
         ],
         screenshots: [],
@@ -72,18 +87,18 @@ export const projectsData: ProjectData[] = [
         screenshots: [],
     },
 
-    {
-        projectScreenshot: VGMDB,
-        projectType: "Website (React / Node)",
-        projectName: "Realtor.com Clone",
-        projectText:
-            "Realtor.com Clone is recreation of the realtor.com website.",
-        links: [
-            {
-                name: "GitHub",
-                link: "https://github.com/JGerVT/InspireCanvas",
-            },
-        ],
-        screenshots: [],
-    },
+    // {
+    //     projectScreenshot: VGMDB,
+    //     projectType: "Website (React / Node)",
+    //     projectName: "Realtor.com Clone",
+    //     projectText:
+    //         "Realtor.com Clone is recreation of the realtor.com website.",
+    //     links: [
+    //         {
+    //             name: "GitHub",
+    //             link: "https://github.com/JGerVT/InspireCanvas",
+    //         },
+    //     ],
+    //     screenshots: [],
+    // },
 ];

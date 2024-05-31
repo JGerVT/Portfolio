@@ -145,12 +145,12 @@ function AboutMeLinks() {
 
 function AboutMeInterests() {
     const AboutMeData = [
+        { icon: <FaCode color="white" size={"23px"} />, name: "Programming" },
         { icon: <FaMusic color="white" size={"23px"} />, name: "Music" },
         {
             icon: <IoLogoGameControllerB color="white" size={"23px"} />,
             name: "Gaming",
         },
-        { icon: <FaCode color="white" size={"23px"} />, name: "Programming" },
         { icon: <FaBookOpen color="white" size={"23px"} />, name: "Learning" },
     ];
     return (

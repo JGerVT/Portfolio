@@ -36,7 +36,7 @@ function Degrees() {
     return (
         <div
             id="EducationDegrees"
-            className="relative flex flex-1 sm:min-h-[460px]  rounded-lg bg-[#0E233C] p-6 flex-col overflow-hidden pointer-events-none max-sm:flex-auto"
+            className="relative flex flex-1 sm:min-h-[460px] max-h-[460px] rounded-lg bg-[#0E233C] p-6 flex-col overflow-hidden pointer-events-none max-sm:flex-auto"
         >
             <img
                 src={DegreesBlob}

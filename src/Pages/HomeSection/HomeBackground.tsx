@@ -6,7 +6,11 @@ import BottomWave from "../../Resources/BottomWave.svg";
 
 export function HomeBackground() {
     const ContainerRef = useRef<HTMLDivElement>(null);
-    const [mousePosOffset, setMousePosOffset] = useState<{
+    const [randPosOffset, setRandPosOffset] = useState<{
+        x: number;
+        y: number;
+    }>({ x: 0, y: 0 });
+    const [transformOffset, setTransformOffset] = useState<{
         x: number;
         y: number;
     }>({ x: 0, y: 0 });
@@ -14,29 +18,57 @@ export function HomeBackground() {
 
     useEffect(() => {
         if (ContainerRef.current) {
-            const rect = ContainerRef.current.getBoundingClientRect();
+            // const rect = ContainerRef.current.getBoundingClientRect();
 
-            // Calculate the center coordinates
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
+            // // Calculate the center coordinates
+            // const centerX = rect.left + rect.width / 2;
+            // const centerY = rect.top + rect.height / 2;
 
-            const handleMouseMove = (e: MouseEvent) => {
-                const mouseX = e.clientX - centerX;
-                const mouseY = e.clientY - centerY;
 
-                // if(e.clientY < rect.bottom){
-                setMousePosOffset({ x: mouseX, y: mouseY });
-                // }
-            };
+            loop();
+            loop2();
+            // setRandPosOffset({x: 0, y: 0});
+            // setTransformOffset({x: 0, y: 0});
 
-            // Attach the event listener to the document
-            document.addEventListener("mousemove", handleMouseMove);
+            // const handleMouseMove = (e: MouseEvent) => {
+            //     const mouseX = e.clientX - centerX;
+            //     const mouseY = e.clientY - centerY;
 
-            return () => {
-                document.removeEventListener("mousemove", handleMouseMove);
-            };
+            //     // if(e.clientY < rect.bottom){
+            //         setRandPosOffset({ x: mouseX, y: mouseY });
+            //     // }
+            // };
+
+            // // Attach the event listener to the document
+            // document.addEventListener("mousemove", handleMouseMove);
+
+            // return () => {
+            //     document.removeEventListener("mousemove", handleMouseMove);
+            // };
         }
     }, []);
+
+
+    function loop() {
+        var randX = Math.round(Math.random() * (7000 - 3500)) + 3500;
+        var randY = Math.round(Math.random() * (7000 - 3500)) + 3500;
+        setRandPosOffset({x: randX, y: randY })
+        
+        setTimeout(()=> {
+            loop();  
+        }, 3100);
+    }
+
+    function loop2() {
+        var randX = Math.round(Math.random() * (1000 - 500)) + 500;
+        var randY = Math.round(Math.random() * (1000 - 500)) + 500;
+        setTransformOffset({x: randX, y: randY })
+        
+
+        setTimeout(()=> {
+            loop();  
+        }, 1400);
+    }
 
     return (
         <div
@@ -44,15 +76,21 @@ export function HomeBackground() {
             id="Background"
             className="absolute left-0 top-0 right-0 bottom-0 flex z-0 pointer-events-none select-none h-full overflow-hidden"
         >
-            <div className="relative">
+            <div className="relative" style={{
+                transform: `translate(${
+                    transformOffset.x * animationScale.Front
+                }px, ${transformOffset.y * animationScale.Front}px)`,
+                transition: "transform 4s ease"
+            }}>
                 <div className=" translate-x-[-170px] translate-y-[80px]">
                 <div
                     id="Back-IMG"
                     className={`absolute`}
                     style={{
                         transform: `translate(${
-                            mousePosOffset.x * animationScale.Back
-                        }px, ${mousePosOffset.y * animationScale.Back}px)`,
+                            randPosOffset.x * animationScale.Back
+                        }px, ${randPosOffset.y * animationScale.Back}px)`,
+                        transition: "transform 5s ease"
                     }}
                 >
                     <img
@@ -64,8 +102,9 @@ export function HomeBackground() {
                 <div
                     style={{
                         transform: `translate(${
-                            mousePosOffset.x * animationScale.Mid
-                        }px, ${mousePosOffset.y * animationScale.Mid}px)`,
+                            randPosOffset.x * animationScale.Mid
+                        }px, ${randPosOffset.y * animationScale.Mid}px)`,
+                        transition: "transform 3s ease"
                     }}
                 >
                     <img
@@ -77,8 +116,9 @@ export function HomeBackground() {
                 <div
                     style={{
                         transform: `translate(${
-                            mousePosOffset.x * animationScale.Front
-                        }px, ${mousePosOffset.y * animationScale.Front}px)`,
+                            randPosOffset.x * animationScale.Front
+                        }px, ${randPosOffset.y * animationScale.Front}px)`,
+                        transition: "transform 3s ease"
                     }}
                 >
                     <img
