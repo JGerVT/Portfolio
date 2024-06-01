@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HomeBackground } from "./HomeBackground";
 import ProgrammerSVG from "../../Resources/ProgrammerSVG.svg";
 import { SmoothScrollToElement } from "../../Utility/utility";
 import ParentSection from "../../Components/ParentSection";
+
+function IconSelector() {
+    const [opacity, setOpacity] = useState(true);
+
+    useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
+
+        function blinkCursor() {
+            timeoutId = setTimeout(() => {
+                setOpacity((prevVal) => !prevVal);
+                blinkCursor();
+            }, 500);
+        }
+
+        blinkCursor();
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, []);
+
+    return (
+        <div
+            className="w-[2px] h-[inherit] ml-[4px] rounded"
+            style={{ backdropFilter: "invert(100%)", opacity: opacity ? 1 : 0 }}
+        ></div>
+    );
+}
 
 export default function Home() {
     return (
@@ -19,21 +47,23 @@ export default function Home() {
                             className="flex flex-col text-left space-y-3 max-w-[520px] z-10 text-white"
                         >
                             <p className="text-2xl text-[#3B61F8]">
-                                Welcome to my Portfolio
+                                Welcome to my Portfolio,
                             </p>
                             <h1 className="text-4xl font-bold pb-4">
                                 I'm a Full Stack Developer
                                 <span className="text-[#3B61F8]">
                                     &nbsp;&
                                     <br />
-                                    Software Developer
+                                    <div className="flex">
+                                        Software Engineer
+                                        {IconSelector()}
+                                    </div>
                                 </span>
                             </h1>
                             <p className="text-[#c4c4c4]">
-                                As a Full Stack Developer and Software Engineer,
-                                I'm passionate about creating functional and
-                                user-friendly applications. While I'm in the
-                                early stages of my career, I'm eager to
+                                As a developer, I'm passionate about creating 
+                                functional, responsive, and user-friendly applications. While 
+                                I'm currently in the early stages of my career, I'm eager to
                                 contribute my skills and learn from experienced
                                 professionals in the field.
                             </p>

@@ -1,5 +1,5 @@
 import React from "react";
-import { projectsData } from "./projectsData";
+import { projectsData } from "../../Data/projectsData";
 import { Project } from "./components/Project";
 import { ScrollboxContainer } from "./components/ScrollboxContainer";
 import ParentSection from "../../Components/ParentSection";
@@ -18,14 +18,13 @@ export default function Projects() {
                 {projectsData.map((data, i) => (
                     <Project
                         key={"Project_" + i}
-                        projectScreenshot={data.projectScreenshot}
-                        projectType={data.projectType}
+                        projectScreenshot={data.projectImages[0]}
+                        projectType={data.projectTypeDisplay}
                         projectName={data.projectName}
-                        projectText={data.projectText}
-                        projectLinks={data.links}
                     />
                 ))}
             </ScrollboxContainer>
+            <div className="mb-20"/>
         </ParentSection>
     );
 }

@@ -17,57 +17,40 @@ export function HomeBackground() {
     const animationScale = { Front: 0.009, Mid: 0.003, Back: 0.0008 };
 
     useEffect(() => {
+        let timeout1:NodeJS.Timeout | undefined;
+        let timeout2:NodeJS.Timeout | undefined;
+
         if (ContainerRef.current) {
-            // const rect = ContainerRef.current.getBoundingClientRect();
+            loop(timeout1);
+            loop2(timeout2);
+        }
 
-            // // Calculate the center coordinates
-            // const centerX = rect.left + rect.width / 2;
-            // const centerY = rect.top + rect.height / 2;
-
-
-            loop();
-            loop2();
-            // setRandPosOffset({x: 0, y: 0});
-            // setTransformOffset({x: 0, y: 0});
-
-            // const handleMouseMove = (e: MouseEvent) => {
-            //     const mouseX = e.clientX - centerX;
-            //     const mouseY = e.clientY - centerY;
-
-            //     // if(e.clientY < rect.bottom){
-            //         setRandPosOffset({ x: mouseX, y: mouseY });
-            //     // }
-            // };
-
-            // // Attach the event listener to the document
-            // document.addEventListener("mousemove", handleMouseMove);
-
-            // return () => {
-            //     document.removeEventListener("mousemove", handleMouseMove);
-            // };
+        return ()=>{
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
         }
     }, []);
 
 
-    function loop() {
+    function loop(timeout: NodeJS.Timeout | undefined) {
         var randX = Math.round(Math.random() * (7000 - 3500)) + 3500;
         var randY = Math.round(Math.random() * (7000 - 3500)) + 3500;
         setRandPosOffset({x: randX, y: randY })
         
-        setTimeout(()=> {
-            loop();  
-        }, 3100);
+        timeout = setTimeout(()=> {
+            loop(timeout);  
+        }, 2100);
     }
 
-    function loop2() {
+    function loop2(timeout: NodeJS.Timeout| undefined) {
         var randX = Math.round(Math.random() * (1000 - 500)) + 500;
         var randY = Math.round(Math.random() * (1000 - 500)) + 500;
         setTransformOffset({x: randX, y: randY })
         
 
-        setTimeout(()=> {
-            loop();  
-        }, 1400);
+        timeout = setTimeout(()=> {
+            loop(timeout);  
+        }, 900);
     }
 
     return (
