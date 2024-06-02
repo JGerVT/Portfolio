@@ -17,7 +17,13 @@ export function ShowProjectInfo() {
                     (val) => val.projectName === currentProjectViewing,
                 ),
             );
+
+            document.body.style.overflow = 'hidden';
         }
+        else{
+            document.body.style.overflow = 'unset';
+        }
+        
     }, [currentProjectViewing]);
 
     function CreateTechnologies() {
@@ -50,12 +56,12 @@ export function ShowProjectInfo() {
                                     className="my-1 mr-1 inline-flex flex-grow-0 cursor-pointer rounded-sm border bg-[#3bf83e3a] px-3 text-sm text-white select-none"
                                     style={{ borderColor: "#3bf8806f" }}
                                 >
-                                    <div className="flex items-center justify-center space-x-1">
+                                    <a className="flex items-center justify-center space-x-1" target="_blank" rel="noopener noreferrer" href={val.linkURL}>
                                         <div className="h-[15px]">
                                             {val.linkIcon}
                                         </div>
                                         <p>{val.linkName}</p>
-                                    </div>
+                                    </a>
                                 </div>
                             ))}
                     </>
@@ -102,7 +108,7 @@ export function ShowProjectInfo() {
 
     return (
         <div
-            className="fixed bottom-0 left-0 right-0 top-0 z-[100] bg-[#000000ad] backdrop-blur"
+            className="fixed bottom-0 left-0 right-0 top-16 z-[25] bg-[#000000ad] backdrop-blur"
             style={{
                 transition: "all .1s ease-in-out",
                 opacity:
@@ -120,7 +126,7 @@ export function ShowProjectInfo() {
         >
             <div
                 id="projectInfoContainer"
-                className="scroll fixed left-[50%] top-[0] z-50 w-[80%] max-w-[700px] -translate-x-1/2 translate-y-[20px] justify-self-center overflow-y-auto rounded border bg-[#0c0c0c] pb-6" // -translate-y-1/2 top-[50%]
+                className="scroll fixed left-[50%] top-[0] z-50 w-[90%] max-w-[750px] -translate-x-1/2 translate-y-[20px] justify-self-center overflow-y-auto rounded border bg-[#0c0c0c] p-4 pb-6" // -translate-y-1/2 top-[50%]
                 style={{
                     border: "1px solid #ffffff2b"
                 }}
@@ -129,7 +135,7 @@ export function ShowProjectInfo() {
                 {CreateImageViewer()}
                 <div className="px-6">
                     {CreateTechnologies()}
-                    <p className="mt-2 text-lg text-[#5594F2]">
+                    <p className="mt-3 text-lg text-[#5594F2]">
                         {projData && projData.projectType}
                     </p>
                     <p className="pb-2 text-2xl font-semibold text-white">
@@ -140,7 +146,7 @@ export function ShowProjectInfo() {
                     </p>
 
                     {CreatePageContent()}
-                    <div className="flex items-center">
+                    <div className="flex items-center mt-2">
                         {CreateLinks()}
                         <div className="flex flex-1"/>
                         {projData?.projectDate && <p className="text-white opacity-30 text-sm">{projData?.projectDate}</p>}

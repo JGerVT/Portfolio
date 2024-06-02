@@ -2,10 +2,17 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../Resources/Logo.svg";
 import { SmoothScrollToElement, getCoords } from "../../Utility/utility";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useProjectContext } from "../../App";
 
 export default function Header() {
+    const { setCurrentProjectViewing } =
+    useProjectContext();
+
     return (
-        <nav className="fixed flex h-16 justify-center items-center bg-[#000000de] w-full top-0 z-50 backdrop-blur-sm">
+        <nav className="fixed flex h-16 justify-center items-center bg-[#000000de] w-full top-0 z-50 backdrop-blur-sm select-none"
+            onClick={()=>{setCurrentProjectViewing("")}}
+        
+        >
             <div className="flex px-10 grow h-full max-sm:px-4 justify-between">
                 <LeftLogo />
                 <ul className=" text-gray-300 h-full hidden lg:flex">

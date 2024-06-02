@@ -21,8 +21,8 @@ function App() {
         <ProjectProvider>
             <div className="relative">
                 <ShowProjectInfo />
+                <Header />
                 <div className="App flex flex-col items-center bg-[#101219]">
-                    <Header />
                     <Home />
                     <AboutMe />
                     <Projects />

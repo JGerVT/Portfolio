@@ -1,3 +1,4 @@
+import { log } from "console";
 import React, { useEffect, useRef, useState } from "react";
 import { BiSolidRightArrow } from "react-icons/bi";
 import styled from "styled-components";
@@ -78,7 +79,7 @@ export function ScrollboxContainer(props: {
         const scrollBox = GameContainer.current;
 
         if (scrollBox) {
-            const handleScroll = () => {
+            const ScrollCheck = () => {
                 // Check if the container can scroll in the X-axis
                 const canScroll = scrollBox.scrollWidth > scrollBox.clientWidth;
                 const isAtEnd =
@@ -90,11 +91,17 @@ export function ScrollboxContainer(props: {
                 setCanScrollLeft(canScroll && !isAtStart);
             };
 
+            const handleScroll = () => {
+                ScrollCheck();
+            };
+
             // Add event listener for scroll events
             scrollBox.addEventListener("scroll", handleScroll);
 
-            // Initial check
-            handleScroll();
+            // On scrollbox resize, update can scroll. This is necessary, otherwise it will not function properly
+            new ResizeObserver(()=>{
+                ScrollCheck();                
+            }).observe(scrollBox)
 
             // Cleanup: remove event listener when component unmounts
             return () => {
@@ -102,6 +109,8 @@ export function ScrollboxContainer(props: {
             };
         }
     }, []);
+    
+    
 
     function ScrollButtons() {
         return (
@@ -169,7 +178,7 @@ export function ScrollboxContainer(props: {
                             onClick={ScrollBoxLeft}
                         >
                             <div className="scrollBoxLeftArrow">
-                                <div className="scrollButtonArrow w-[34px] h-[34px] rounded-full bg-black translate-x-[5px]"/>
+                                <div className="scrollButtonArrow h-[34px] w-[34px] translate-x-[5px] rounded-full bg-black" />
                                 <BiSolidRightArrow
                                     color="white"
                                     className="scrollButtonArrow"
@@ -185,7 +194,7 @@ export function ScrollboxContainer(props: {
                             onClick={ScrollBoxRight}
                         >
                             <div className="scrollBoxRightArrow relative">
-                                <div className="scrollButtonArrow w-[34px] h-[34px] rounded-full bg-black translate-x-[5px]"/>
+                                <div className="scrollButtonArrow h-[34px] w-[34px] translate-x-[5px] rounded-full bg-black" />
                                 <BiSolidRightArrow
                                     color="white"
                                     className="scrollButtonArrow"
@@ -216,25 +225,19 @@ const ScrollBTNArrow = styled.div<{
         display: flex;
         align-items: center;
         height: 100%;
-        width: 200px;
+        width: 140px;
     }
 
-    .scrollBoxLeftArrow{
-        cursor: ${(state) =>
-            state.$canScrollLeft ? "pointer" : "auto"};
+    .scrollBoxLeftArrow {
+        cursor: ${(state) => (state.$canScrollLeft ? "pointer" : "auto")};
 
-
-        opacity: ${(state) =>
-            state.$canScrollLeft ? ".4" : ".1"};
+        opacity: ${(state) => (state.$canScrollLeft ? ".4" : ".1")};
     }
-    .scrollBoxRightArrow{
-        cursor: ${(state) =>
-            state.$canScrollRight ? "pointer" : "auto"};
+    .scrollBoxRightArrow {
+        cursor: ${(state) => (state.$canScrollRight ? "pointer" : "auto")};
 
-        opacity: ${(state) =>
-            state.$canScrollRight ? ".4" : ".1"};
+        opacity: ${(state) => (state.$canScrollRight ? ".4" : ".1")};
     }
-    
 
     .scrollBoxLeftArrow > .scrollButtonArrow {
         position: absolute;
@@ -249,8 +252,7 @@ const ScrollBTNArrow = styled.div<{
 
     &:hover {
         .scrollBoxLeftArrow {
-            opacity: ${(state) =>
-            state.$canScrollLeft ? ".8" : ""};
+            opacity: ${(state) => (state.$canScrollLeft ? ".8" : "")};
 
             background-image: ${(state) =>
                 state.$canScrollLeft
@@ -258,8 +260,7 @@ const ScrollBTNArrow = styled.div<{
                     : ""};
         }
         .scrollBoxRightArrow {
-            opacity: ${(state) =>
-            state.$canScrollRight ? ".8" : ""};
+            opacity: ${(state) => (state.$canScrollRight ? ".8" : "")};
 
             background-image: ${(state) =>
                 state.$canScrollRight

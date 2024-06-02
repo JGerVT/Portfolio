@@ -31,9 +31,9 @@ input:focus, textarea:focus { /* You can also use .element.text:focus here */
 }  
 
 .container {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
 }
 .container::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+  display: none; 
 }

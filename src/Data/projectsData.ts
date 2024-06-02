@@ -46,7 +46,7 @@ export const projectsData: ProjectData[] = [
       "VGDB (Video Game Database) is a website that allows users to Organize, Rate, and Catalogue their favorite games.",
     projectType: "Website",
     projectTypeDisplay: "Website (React / TypeScript)",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "styled-components"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "styled-components", "Axios"],
     textBlocks: [],
     projectLinks: [
       {

@@ -121,14 +121,14 @@ function AboutMeLinks() {
         link: string;
     }) {
         return (
-            <div className="flex max-[400px]:flex-col">
-                <div className="flex w-[150px] items-center space-x-4">
+            <div className="flex flex-wrap max-[400px]:flex-col">
+                <div className="flex w-[150px] flex-shrink-0 items-center space-x-4 pb-1">
                     {props.icon}
                     <p className="text-white">{props.name}</p>
                 </div>
                 {props.link !== "" ? (
                     <a
-                        className="text-[#5594F2]"
+                        className="text-[#5594F2] min-w-[250px]"
                         href={props.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -136,7 +136,7 @@ function AboutMeLinks() {
                         {props.value}
                     </a>
                 ) : (
-                    <p className="text-[#5594F2]">{props.value}</p>
+                    <p className="text-[#5594F2] min-w-[250px]">{props.value}</p>
                 )}
             </div>
         );
