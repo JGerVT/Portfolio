@@ -2,10 +2,17 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../Resources/Logo.svg";
 import { SmoothScrollToElement, getCoords } from "../../Utility/utility";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useProjectContext } from "../../App";
 
 export default function Header() {
+    const { setCurrentProjectViewing } =
+    useProjectContext();
+
     return (
-        <nav className="fixed flex h-16 justify-center items-center bg-black w-full top-0 z-50">
+        <nav className="fixed flex h-16 justify-center items-center bg-[#000000de] w-full top-0 z-50 backdrop-blur-sm select-none"
+            onClick={()=>{setCurrentProjectViewing("")}}
+        
+        >
             <div className="flex px-10 grow h-full max-sm:px-4 justify-between">
                 <LeftLogo />
                 <ul className=" text-gray-300 h-full hidden lg:flex">
@@ -21,12 +28,17 @@ function LinksSectionDropDown() {
     const [isCollapsed, setIsCollapsed] = useState(true);
 
     return (
-        <button className="hidden max-lg:flex w-[40px] justify-center items-center" onClick={()=>{setIsCollapsed(!isCollapsed)}}>
+        <button
+            className="hidden max-lg:flex w-[40px] justify-center items-center"
+            onClick={() => {
+                setIsCollapsed(!isCollapsed);
+            }}
+        >
             <GiHamburgerMenu color="#3B61F8" size={"20px"} />
-            <div className="dropdownWrapper absolute top-full right-0 grid transition-all ease-in-out duration-200"
+            <div
+                className="dropdownWrapper absolute top-full right-0 grid transition-all ease-in-out duration-200"
                 style={{ gridTemplateRows: !isCollapsed ? "1fr" : "0fr" }}
             >
-
                 <div className="dropDown overflow-hidden w-[250px] bg-[#101219] rounded-bl-lg">
                     <ul className="flex flex-col text-gray-300 h-full my-2 px-6 mb-[20px]">
                         <LinksSection />
@@ -59,25 +71,25 @@ function LinksSection() {
             ) {
                 setSelectedNav("Home");
             } else if (
+                Projects !== null &&
+                scrollPos <= getCoords(Projects).top + scrollPosOffset
+            ) {
+                setSelectedNav("About");
+            } else if (
                 Education !== null &&
                 scrollPos <= getCoords(Education).top + scrollPosOffset
             ) {
-                setSelectedNav("About");
+                setSelectedNav("Projects");
             } else if (
                 Skills !== null &&
                 scrollPos <= getCoords(Skills).top + scrollPosOffset
             ) {
                 setSelectedNav("Education");
             } else if (
-                Projects !== null &&
-                scrollPos <= getCoords(Projects).top + scrollPosOffset
-            ) {
-                setSelectedNav("Skills");
-            } else if (
                 Contact !== null &&
                 scrollPos <= getCoords(Contact).top + scrollPosOffset
             ) {
-                setSelectedNav("Projects");
+                setSelectedNav("Skills");
             } else {
                 setSelectedNav("");
             }
@@ -95,9 +107,9 @@ function LinksSection() {
         <>
             <Links title="Home" selectedNav={selectedNav} />
             <Links title="About" selectedNav={selectedNav} />
+            <Links title="Projects" selectedNav={selectedNav} />
             <Links title="Education" selectedNav={selectedNav} />
             <Links title="Skills" selectedNav={selectedNav} />
-            <Links title="Projects" selectedNav={selectedNav} />
             <li
                 className="flex flex-1 h-full cursor-pointer items-center px-5 text-white max-lg:h-[50px]"
                 onClick={() => {
@@ -138,13 +150,15 @@ function Links(props: { title: string; selectedNav: string }) {
 function LeftLogo() {
     return (
         <div
-            className="flex text-white items-center space-x-4"
+            className="flex text-white items-center space-x-1"
             onClick={() => {}}
         >
-            <img src={Logo} alt="Logo" className="w-[38px]" />
-            <div className="flex space-x-[5px] pb-1 max-[350px]:hidden">
-                <p className="text-[20px]">Jesse</p>
-                <p className="text-[20px] text-blue-500">Germain</p>
+            <img src={Logo} alt="Logo" className="w-[38px] mr-3" />
+            <div className="flex space-x-[5px] max-[350px]:hidden ">
+                {/* <p className="text-[20px]">{`Jesse`}</p>
+                <p className="text-[20px] text-blue-500">{`Germain`}</p> */}
+                <p className="text-[20px]">{`<Jesse`}</p>
+                <p className="text-[20px] text-blue-500">{`Germain/>`}</p>
             </div>
         </div>
     );

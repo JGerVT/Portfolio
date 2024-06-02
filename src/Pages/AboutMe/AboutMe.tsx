@@ -56,12 +56,12 @@ function AboutMeInfo() {
             {/* <div className="flex self-center min-[1000px]:hidden pb-5 justify-center">
                 <AboutMeProfilePicture />
             </div> */}
-            <p className="text-white text-base">
+            <p className="text-[#c4c4c4] text-base">
                 From my years of personal programming experience, I bring
                 hands-on experience in designing responsive and dynamic user
-                interfaces using cutting-edge technologies such as React and
-                PyQt. My programming experience spans across Python, Java, and
-                C#, and I have extensive experience managing data through SQL
+                interfaces using industry standard technologies such as React and
+                Node.js. My programming experience spans across Python, Java, JS/TS and
+                C#, and I have hands on experience managing data through SQL
                 and JSON databases. Additionally, I have experience crafting
                 user-friendly interfaces, leveraging tools such as Adobe Xd and
                 Figma.
@@ -121,14 +121,14 @@ function AboutMeLinks() {
         link: string;
     }) {
         return (
-            <div className="flex max-[400px]:flex-col">
-                <div className="flex w-[150px] items-center space-x-4">
+            <div className="flex flex-wrap max-[400px]:flex-col">
+                <div className="flex w-[150px] flex-shrink-0 items-center space-x-4 pb-1">
                     {props.icon}
                     <p className="text-white">{props.name}</p>
                 </div>
                 {props.link !== "" ? (
                     <a
-                        className="text-[#5594F2]"
+                        className="text-[#5594F2] min-w-[250px]"
                         href={props.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -136,7 +136,7 @@ function AboutMeLinks() {
                         {props.value}
                     </a>
                 ) : (
-                    <p className="text-[#5594F2]">{props.value}</p>
+                    <p className="text-[#5594F2] min-w-[250px]">{props.value}</p>
                 )}
             </div>
         );

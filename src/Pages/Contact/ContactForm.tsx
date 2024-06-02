@@ -42,6 +42,7 @@ export function ContactForm() {
         // Define the email parameters
         const params = {
             from_name: name,
+            from_email: email,
             to_name: "Jesse", // Replace with the recipient's email address
             to_email: "jgermaincontact@gmail.com", // Replace with the recipient's email address
             subject: "New Contact Form Submission",
