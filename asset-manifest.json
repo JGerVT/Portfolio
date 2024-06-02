@@ -1,18 +1,13 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.56e193f6.css",
-    "main.js": "/Portfolio/static/js/main.cf3ddbbc.js",
+    "main.css": "/Portfolio/static/css/main.2148b597.css",
+    "main.js": "/Portfolio/static/js/main.8f960d48.js",
     "static/js/787.d4aba7ab.chunk.js": "/Portfolio/static/js/787.d4aba7ab.chunk.js",
-    "static/media/videoGameDatabase.png": "/Portfolio/static/media/videoGameDatabase.9a196cbdfa6cdf3c710f.png",
-    "static/media/InspireCanvas.png": "/Portfolio/static/media/InspireCanvas.868f69b6f99f4b903000.png",
     "static/media/shinyOverlay.png": "/Portfolio/static/media/shinyOverlay.fde4b5e412f735ee6685.png",
     "static/media/placeholderProfile.png": "/Portfolio/static/media/placeholderProfile.ecb500f44662b67ec046.png",
     "static/media/Poppins-Regular.ttf": "/Portfolio/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-SemiBold.ttf": "/Portfolio/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Poppins-Bold.ttf": "/Portfolio/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
-    "static/media/portfolioScreenshot.png": "/Portfolio/static/media/portfolioScreenshot.dd7f175363240ca84fc7.png",
-    "static/media/habitTracker.png": "/Portfolio/static/media/habitTracker.d31901765354ab8046bb.png",
-    "static/media/habitTrackerV2.png": "/Portfolio/static/media/habitTrackerV2.a67b6d108004d27d82ca.png",
     "static/media/ProgrammerSVG.svg": "/Portfolio/static/media/ProgrammerSVG.b4f08ba3ce325a8acb4b17098732f327.svg",
     "static/media/Mid.svg": "/Portfolio/static/media/Mid.5c65a21b83cc1e5061541b95dfa2db33.svg",
     "static/media/Back.svg": "/Portfolio/static/media/Back.69bb128a76d3d55de02d3c28b66fc344.svg",
@@ -24,12 +19,12 @@
     "static/media/graduate.svg": "/Portfolio/static/media/graduate.04c5becb1ff60031901cc6e493e3acff.svg",
     "static/media/Front.svg": "/Portfolio/static/media/Front.7961601d630a817c19a7f89d26659b8c.svg",
     "static/media/BottomWave.svg": "/Portfolio/static/media/BottomWave.06712e6c3a802dc0a788b76a45381064.svg",
-    "main.56e193f6.css.map": "/Portfolio/static/css/main.56e193f6.css.map",
-    "main.cf3ddbbc.js.map": "/Portfolio/static/js/main.cf3ddbbc.js.map",
+    "main.2148b597.css.map": "/Portfolio/static/css/main.2148b597.css.map",
+    "main.8f960d48.js.map": "/Portfolio/static/js/main.8f960d48.js.map",
     "787.d4aba7ab.chunk.js.map": "/Portfolio/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56e193f6.css",
-    "static/js/main.cf3ddbbc.js"
+    "static/css/main.2148b597.css",
+    "static/js/main.8f960d48.js"
   ]
 }
