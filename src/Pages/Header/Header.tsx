@@ -153,10 +153,8 @@ function LeftLogo() {
             className="flex text-white items-center space-x-1"
             onClick={() => {}}
         >
-            <img src={Logo} alt="Logo" className="w-[38px] mr-3" />
+            <img src={Logo} alt="Logo" className="w-[34px] mr-3" />
             <div className="flex space-x-[5px] max-[350px]:hidden ">
-                {/* <p className="text-[20px]">{`Jesse`}</p>
-                <p className="text-[20px] text-blue-500">{`Germain`}</p> */}
                 <p className="text-[20px]">{`<Jesse`}</p>
                 <p className="text-[20px] text-blue-500">{`Germain/>`}</p>
             </div>

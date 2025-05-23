@@ -42,9 +42,9 @@ export default function Skills() {
                             {TechnicalSkills(windowDimensions.width > 640)}
                         </ScrollboxContainer>
                     </div>
-                    <p className="mt-4 text-[14px] text-gray-500">
+                    <p className="text-[14px] text-gray-500">
                         * These percentages reflect subjective self-assessments
-                        of my current skill levels and are not based on any
+                        of my current skill levels/comfortability and are not based on any
                         standardized metric.
                     </p>
                 </div>

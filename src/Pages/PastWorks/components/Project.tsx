@@ -11,7 +11,7 @@ const ProjectStyled = styled.div`
         background-color: transparent;
         border-radius: 8px;
     }
-
+    
     .projInfo {
         transition: all 0.15s ease-in-out;
         opacity: 0;
@@ -19,7 +19,7 @@ const ProjectStyled = styled.div`
     }
 
     &:hover {
-        outline: 2px solid #8f8f8f81;
+        outline: 2px solid #5274ff;
         .infoContainer {
             backdrop-filter: blur(1.5px);
             background-color: #0000003e;

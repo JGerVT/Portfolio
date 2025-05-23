@@ -96,26 +96,26 @@ export const WebDevelopmentData = {
                 }
             ],
         },
-        {
-            CourseLocation: "Udemy",
-            CourseData: [
-                {
-                    courseName: "Understanding TypeScript",
-                    courseTime: "Fall - 2023",
-                    link: "https://www.udemy.com/course/understanding-typescript/" 
-                },
-                {
-                    courseName: "React.js & Firebase Project - ReactJS 18, Firebase 9 Project",
-                    courseTime: "Winter - 2024",
-                    link: "https://www.udemy.com/course/reactjs-firebase-project/" 
-                },
-                {
-                    courseName: "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
-                    courseTime: "Spring - 2024",
-                    link: "https://www.udemy.com/course/nodejs-the-complete-guide/" 
-                },
-            ],
-        },
+        // {
+        //     CourseLocation: "Udemy",
+        //     CourseData: [
+        //         {
+        //             courseName: "Understanding TypeScript",
+        //             courseTime: "Fall - 2023",
+        //             link: "https://www.udemy.com/course/understanding-typescript/" 
+        //         },
+        //         {
+        //             courseName: "React.js & Firebase Project - ReactJS 18, Firebase 9 Project",
+        //             courseTime: "Winter - 2024",
+        //             link: "https://www.udemy.com/course/reactjs-firebase-project/" 
+        //         },
+        //         {
+        //             courseName: "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
+        //             courseTime: "Spring - 2024",
+        //             link: "https://www.udemy.com/course/nodejs-the-complete-guide/" 
+        //         },
+        //     ],
+        // },
     ],
 };
 

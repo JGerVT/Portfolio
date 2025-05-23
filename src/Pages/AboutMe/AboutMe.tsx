@@ -13,16 +13,13 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function AboutMe() {
     return (
         <ParentSection sectionID="About" paddingY="0px">
-            <div
-                className="flex justify-between py-[100px] pt-[50px]
-                    max-lg:flex-col max-lg:py-[35px]"
-            >
+            <div className="flex justify-between py-[100px] pt-[50px] max-lg:flex-col max-lg:py-[35px]">
                 <div id="LeftAboutSection" className="self-center lg:pr-16">
                     <AboutMeProfilePicture />
                 </div>
                 <div
                     id="RightAboutSection"
-                    className="text-left max-w-[800px] space-y-[50px] pb-1"
+                    className="max-w-[800px] space-y-[50px] pb-1 text-left"
                 >
                     <AboutMeInfo />
                     <AboutMeLinks />
@@ -35,15 +32,15 @@ export default function AboutMe() {
 
 function AboutMeProfilePicture() {
     return (
-        <div className="relative overflow-hidden p-3 my-4">
+        <div className="relative my-4 overflow-hidden p-3">
             <img
                 src={Placeholder}
                 alt="Profile"
-                className="min-w-[270px] w-[270px] object-cover object-center"
+                className="w-[270px] min-w-[270px] object-cover object-center"
             />
 
-            <div className="absolute top-0 left-0 h-[50px] w-[50px] border-l-2 border-t-2 border-[#3b61f8] " />
-            <div className="absolute bottom-0 right-0 h-[50px] w-[50px] border-r-2 border-b-2 border-[#3b61f8] " />
+            <div className="absolute left-0 top-0 h-[50px] w-[50px] border-l-2 border-t-2 border-[#3b61f8]" />
+            <div className="absolute bottom-0 right-0 h-[50px] w-[50px] border-b-2 border-r-2 border-[#3b61f8]" />
         </div>
     );
 }
@@ -52,19 +49,19 @@ function AboutMeInfo() {
     return (
         <div id="AboutMeInfo">
             <p className="text-lg text-[#5594F2]">Info</p>
-            <p className="text-2xl text-white font-semibold pb-4">About Me</p>
+            <p className="pb-4 text-2xl font-semibold text-white">About Me</p>
             {/* <div className="flex self-center min-[1000px]:hidden pb-5 justify-center">
                 <AboutMeProfilePicture />
             </div> */}
-            <p className="text-[#c4c4c4] text-base">
+            <p className="text-base text-[#c4c4c4]">
                 From my years of personal programming experience, I bring
                 hands-on experience in designing responsive and dynamic user
-                interfaces using industry standard technologies such as React and
-                Node.js. My programming experience spans across Python, Java, JS/TS and
-                C#, and I have hands on experience managing data through SQL
-                and JSON databases. Additionally, I have experience crafting
-                user-friendly interfaces, leveraging tools such as Adobe Xd and
-                Figma.
+                interfaces using industry standard technologies such as React
+                and Node.js. My programming experience spans across Python,
+                Java, JS/TS and C#, and I have hands on experience managing data
+                through SQL and JSON databases. Additionally, I have experience
+                crafting user-friendly interfaces, leveraging tools such as
+                Adobe Xd and Figma.
             </p>
         </div>
     );
@@ -76,7 +73,6 @@ function AboutMeLinks() {
             icon: <IoLocationSharp color="white" size={"23px"} />,
             name: "Location",
             value: "USA, Vermont",
-            link: "",
         },
         {
             icon: <MdOutlineEmail color="white" size={"23px"} />,
@@ -118,7 +114,7 @@ function AboutMeLinks() {
         icon: React.JSX.Element;
         name: string;
         value: string;
-        link: string;
+        link?: string;
     }) {
         return (
             <div className="flex flex-wrap max-[400px]:flex-col">
@@ -126,9 +122,9 @@ function AboutMeLinks() {
                     {props.icon}
                     <p className="text-white">{props.name}</p>
                 </div>
-                {props.link !== "" ? (
+                {props.link && props.link !== "" ? (
                     <a
-                        className="text-[#5594F2] min-w-[250px]"
+                        className="min-w-[250px] text-[#5594F2] underline"
                         href={props.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -136,26 +132,29 @@ function AboutMeLinks() {
                         {props.value}
                     </a>
                 ) : (
-                    <p className="text-[#5594F2] min-w-[250px]">{props.value}</p>
+                    <p className="min-w-[250px] text-[#5594F2]">
+                        {props.value}
+                    </p>
                 )}
             </div>
         );
     }
 }
 
+const AboutMeData = [
+    { icon: <FaCode color="white" size={"23px"} />, name: "Programming" },
+    { icon: <FaMusic color="white" size={"23px"} />, name: "Music" },
+    {
+        icon: <IoLogoGameControllerB color="white" size={"23px"} />,
+        name: "Gaming",
+    },
+    { icon: <FaBookOpen color="white" size={"23px"} />, name: "Learning" },
+];
+
 function AboutMeInterests() {
-    const AboutMeData = [
-        { icon: <FaCode color="white" size={"23px"} />, name: "Programming" },
-        { icon: <FaMusic color="white" size={"23px"} />, name: "Music" },
-        {
-            icon: <IoLogoGameControllerB color="white" size={"23px"} />,
-            name: "Gaming",
-        },
-        { icon: <FaBookOpen color="white" size={"23px"} />, name: "Learning" },
-    ];
     return (
         <div id="AboutMeInterests">
-            <p className="text-lg text-white font-semibold pb-4">
+            <p className="pb-4 text-lg font-semibold text-white">
                 My Interests
             </p>
             <div className="flex justify-between max-xl:flex-col max-xl:space-y-4">

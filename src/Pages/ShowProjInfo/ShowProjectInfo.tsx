@@ -126,14 +126,14 @@ export function ShowProjectInfo() {
         >
             <div
                 id="projectInfoContainer"
-                className="scroll fixed left-[50%] top-[0] z-50 w-[90%] max-w-[750px] -translate-x-1/2 translate-y-[20px] justify-self-center overflow-y-auto rounded border bg-[#0c0c0c] p-4 pb-6" // -translate-y-1/2 top-[50%]
+                className="scroll fixed left-[50%] top-[0] z-50 w-[90%] max-w-[1000px] -translate-x-1/2 translate-y-[20px] justify-self-center overflow-y-auto rounded border bg-[#0c0c0c] p-4 pb-6" // -translate-y-1/2 top-[50%]
                 style={{
                     border: "1px solid #ffffff2b"
                 }}
                 onClick={(e)=>{e.stopPropagation()}}
             >
                 {CreateImageViewer()}
-                <div className="px-6">
+                <div className="px-6 flex flex-1 flex-col">
                     {CreateTechnologies()}
                     <p className="mt-3 text-lg text-[#5594F2]">
                         {projData && projData.projectType}

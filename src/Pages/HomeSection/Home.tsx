@@ -4,7 +4,7 @@ import ProgrammerSVG from "../../Resources/ProgrammerSVG.svg";
 import { SmoothScrollToElement } from "../../Utility/utility";
 import ParentSection from "../../Components/ParentSection";
 
-function IconSelector() {
+function BlinkingSelection() {
     const [opacity, setOpacity] = useState(true);
 
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function Home() {
                                     <br />
                                     <div className="flex">
                                         Software Engineer
-                                        {IconSelector()}
+                                        {/* {IconSelector()} */}
                                     </div>
                                 </span>
                             </h1>
