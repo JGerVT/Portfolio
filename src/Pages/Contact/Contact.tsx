@@ -90,14 +90,17 @@ function ContactMeInfo() {
         text: string;
         link: string;
     }) {
+        console.log(props.link);
+        
+
         return (
             <div
                 className="flex space-x-4 items-center text-[14px] overflow-hidden z-10"
                 style={{ cursor: props.link !== "" ? "cursor-pointer" : "" }}
             >
                 {props.icon}
-                {props.link !== "" ? (
-                    <a className="text-[#5594F2]" href="https://">
+                {props.link && props.link !== "" ? (
+                    <a className="text-[#5594F2] underline" href={props.link} target="_blank" rel="noopener noreferrer">
                         {props.text}
                     </a>
                 ) : (

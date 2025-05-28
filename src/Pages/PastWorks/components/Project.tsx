@@ -11,25 +11,34 @@ const ProjectStyled = styled.div`
         background-color: transparent;
         border-radius: 8px;
     }
-    
+
     .projInfo {
         transition: all 0.15s ease-in-out;
         opacity: 0;
         bottom: -4px;
     }
 
+    .projInfo {
+        opacity: 1;
+        background-image: linear-gradient(360deg, black, transparent);
+        margin-top: 0px;
+        bottom: 0px;
+
+        height: 150px;
+    }
+    
     &:hover {
         outline: 2px solid #5274ff;
-        .infoContainer {
+        /* .infoContainer {
             backdrop-filter: blur(1.5px);
             background-color: #0000003e;
-        }
-
+        } */
         .projInfo {
             opacity: 1;
             background-image: linear-gradient(360deg, black, transparent);
             margin-top: 0px;
             bottom: 0px;
+            /* height: 200px; */
         }
     }
 `;
@@ -56,7 +65,7 @@ export function Project(props: {
                 />
             </div>
             <div className="infoContainer absolute bottom-0 left-0 right-0 top-0 overflow-hidden rounded-lg">
-                <div className="projInfo absolute bottom-0 left-0 right-0 flex h-[200px] flex-col justify-between px-4 pb-[5px] pt-3">
+                <div className="projInfo absolute bottom-0 left-0 right-0 flex flex-col justify-between px-4 pb-[5px] pt-3">
                     <div className="absolute bottom-0">
                         <p className="text-[14px] text-[#6B8BFF]">
                             {props.projectType}

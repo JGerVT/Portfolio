@@ -27,6 +27,28 @@ export const projectsData: ProjectData[] = [
         projectDate: "Jan, 2024 - ",
     },
     {
+        projectName: "Random File Selector",
+        projectImages: [
+            "RandomImageSelector/Random_File_Selector_1.png",
+            "RandomImageSelector/Random_File_Selector_2.png",
+            "RandomImageSelector/Random_File_Selector_3.png",
+        ],
+        projectDescription:
+            "Random Image Selector is a desktop application that enables users to select a grouping of up to 4 random images. This software provides a convenient way to find random images from a selected path for inspiration, idea generation, or personal enjoyment. Additionally, users can favorite or open images directly from the application. \n\nI utilized Tauri for this project to explore its capabilities and familiarize myself with the technology, although I have not had extensive experience with it or Rust.",
+        projectType: "Software",
+        projectTypeDisplay: "Software (React / Tauri)",
+        technologies: [
+            "Tauri",
+            "React",
+            "TypeScript",
+            "Rust",
+            "Tailwind CSS",
+            "styled-components",
+        ],
+        textBlocks: [],
+        projectDate: "Apr, 2025",
+    },
+    {
         projectName: "Clipboard Translator",
         projectImages: ["ClipboardTranslator/Clipboard_Translator.png"],
         projectDescription:

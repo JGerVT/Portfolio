@@ -164,7 +164,7 @@ export function ScrollboxContainer(props: {
                 <div
                     ref={GameContainer}
                     id="ProjectsContainer"
-                    className="container flex w-full space-x-[47px] overflow-y-hidden overflow-x-scroll"
+                    className="container flex w-full space-x-[33px] overflow-y-hidden overflow-x-scroll px-1"
                 >
                     {props.children}
                 </div>

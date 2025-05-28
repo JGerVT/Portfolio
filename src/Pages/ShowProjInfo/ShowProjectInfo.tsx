@@ -96,6 +96,7 @@ export function ShowProjectInfo() {
                         projData.projectImages.map((val, index) => (
                             <div key={index} className="flex h-[inherit] w-[inherit] flex-shrink-0 items-center justify-center">
                                 <img
+                                    className="max-w-[800px] my-4"
                                     src={`${process.env.PUBLIC_URL}/img/${val}`}
                                     alt=""
                                 />

@@ -3,8 +3,8 @@ export const SkillsData = {
         { header: "Front-End" },
         {
             name: "HTML5",
-            amt: 90,
-            info: "Over 7 years of experience crafting websites from scratch with HTML, although I primarily use JSX now in React.",
+            amt: 75,
+            info: "I have years of experience building websites and applications with HTML, although I mow primarily use JSX in React.",
         },
         {
             name: "JSX",
@@ -20,6 +20,11 @@ export const SkillsData = {
             name: "React",
             amt: 80,
             info: "6+ years of experience developing applications and websites with React, with a strong understanding of best practices and continuous skill improvement.",
+        },
+        {
+            name: "Zustand",
+            amt: 70,
+            info: "2+ years of experience utilizing Zustand for state management in React applications. I use Zustand to create a centralized store for my applications, allowing me to easily manage state across multiple components and features. The store is broken down into multiple slices, each containing data related to a specific feature of the application. This allows me to easily debug and add new features to my application."
         },
     ],
     backEnd: [
