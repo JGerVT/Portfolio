@@ -15,12 +15,14 @@ import { ShowProjectInfo } from "./Pages/ShowProjInfo/ShowProjectInfo";
 import { FaGithub } from "react-icons/fa6";
 import { BiGlobe } from "react-icons/bi";
 import { projectsData } from "./Data/projectsData";
+import { ShowProjectInfoV1 } from "./Pages/ShowProjInfo/ShowProjectInfo copy_backup";
 
 function App() {
     return (
         <ProjectProvider>
             <div className="relative">
                 <ShowProjectInfo />
+                {/* <ShowProjectInfoV1 /> */}
                 <Header />
                 <div className="App flex flex-col items-center bg-[#101219]">
                     <Home />

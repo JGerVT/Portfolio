@@ -150,8 +150,10 @@ function Links(props: { title: string; selectedNav: string }) {
 function LeftLogo() {
     return (
         <div
-            className="flex text-white items-center space-x-1"
-            onClick={() => {}}
+            className="flex text-white items-center space-x-1 cursor-pointer"
+            onClick={() => {
+                SmoothScrollToElement("Home");
+            }}
         >
             <img src={Logo} alt="Logo" className="w-[34px] mr-3" />
             <div className="flex space-x-[5px] max-[350px]:hidden ">

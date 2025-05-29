@@ -1,4 +1,3 @@
-import { log } from "console";
 import React, { useEffect, useRef, useState } from "react";
 import { BiSolidRightArrow } from "react-icons/bi";
 import styled from "styled-components";
@@ -8,21 +7,24 @@ export function ScrollboxContainer(props: {
     subTitle?: string;
     children?: React.ReactNode;
     arrowsOnImage?: boolean;
+    focusOnInit?: boolean;
 }) {
     const [canScrollRight, setCanScrollRight] = useState(false);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const GameContainer = useRef<HTMLDivElement>(null);
 
-    function ScrollBoxRight(e: React.MouseEvent) {
+    function ScrollBoxRight() {
         if (GameContainer.current?.children) {
+            GameContainer.current.focus();
             scrollToNearestItem(
                 GameContainer.current.getBoundingClientRect().width,
             );
         }
     }
 
-    function ScrollBoxLeft(e: React.MouseEvent) {
+    function ScrollBoxLeft() {
         if (GameContainer.current?.children) {
+            GameContainer.current.focus();
             scrollToNearestItem(
                 -GameContainer.current.getBoundingClientRect().width,
             );
@@ -99,9 +101,9 @@ export function ScrollboxContainer(props: {
             scrollBox.addEventListener("scroll", handleScroll);
 
             // On scrollbox resize, update can scroll. This is necessary, otherwise it will not function properly
-            new ResizeObserver(()=>{
-                ScrollCheck();                
-            }).observe(scrollBox)
+            new ResizeObserver(() => {
+                ScrollCheck();
+            }).observe(scrollBox);
 
             // Cleanup: remove event listener when component unmounts
             return () => {
@@ -109,8 +111,6 @@ export function ScrollboxContainer(props: {
             };
         }
     }, []);
-    
-    
 
     function ScrollButtons() {
         return (
@@ -141,6 +141,33 @@ export function ScrollboxContainer(props: {
         );
     }
 
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (document.activeElement === GameContainer.current) {
+                if (e.key === "ArrowLeft") {
+                    ScrollBoxLeft();
+                    e.preventDefault();
+                } else if (e.key === "ArrowRight") {
+                    ScrollBoxRight();
+                    e.preventDefault();
+                }
+            }
+        };
+
+        // Add event listener
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!props.focusOnInit) return;
+
+        GameContainer.current?.focus();
+    }, []);
+
     return (
         <div className="relative z-[1] h-full w-full">
             <div className="relative z-10 flex flex-[1.7] flex-col">
@@ -163,8 +190,16 @@ export function ScrollboxContainer(props: {
                 )}
                 <div
                     ref={GameContainer}
+                    autoFocus
                     id="ProjectsContainer"
-                    className="container flex w-full space-x-[33px] overflow-y-hidden overflow-x-scroll px-1"
+                    className="container flex w-full space-x-[33px] overflow-y-hidden overflow-x-scroll"
+                    style={{
+                        alignSelf: "anchor-center",
+                        outline: "none",
+                    }}
+                    onClick={() => {
+                        GameContainer.current?.focus();
+                    }}
                 >
                     {props.children}
                 </div>
@@ -231,12 +266,12 @@ const ScrollBTNArrow = styled.div<{
     .scrollBoxLeftArrow {
         cursor: ${(state) => (state.$canScrollLeft ? "pointer" : "auto")};
 
-        opacity: ${(state) => (state.$canScrollLeft ? ".4" : ".1")};
+        opacity: ${(state) => (state.$canScrollLeft ? ".8" : ".1")};
     }
     .scrollBoxRightArrow {
         cursor: ${(state) => (state.$canScrollRight ? "pointer" : "auto")};
 
-        opacity: ${(state) => (state.$canScrollRight ? ".4" : ".1")};
+        opacity: ${(state) => (state.$canScrollRight ? ".8" : ".1")};
     }
 
     .scrollBoxLeftArrow > .scrollButtonArrow {

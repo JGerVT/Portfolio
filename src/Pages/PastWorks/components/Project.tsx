@@ -26,13 +26,14 @@ const ProjectStyled = styled.div`
 
         height: 150px;
     }
-    
+
     &:hover {
         outline: 2px solid #5274ff;
         /* .infoContainer {
             backdrop-filter: blur(1.5px);
             background-color: #0000003e;
         } */
+            
         .projInfo {
             opacity: 1;
             background-image: linear-gradient(360deg, black, transparent);
@@ -60,6 +61,10 @@ export function Project(props: {
             <div className="overflow-hidden rounded-lg">
                 <img
                     className="center h-[280px] bg-black object-cover"
+                    style={{
+                        scale: "1.004", // Add this to remove slight border edges around images
+                        imageRendering: "-moz-crisp-edges"
+                    }}
                     src={`${process.env.PUBLIC_URL}/img/${props.projectScreenshot}`}
                     alt="Project Pic"
                 />

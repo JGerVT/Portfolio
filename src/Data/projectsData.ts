@@ -2,11 +2,16 @@ export const projectsData: ProjectData[] = [
     {
         projectName: "Habit Tracker",
         projectImages: [
-            "HabitTrackerV2/habitTrackerV2.png",
-            "HabitTrackerV2/habitTrackerV2.png",
+            "HabitTrackerV2/habit-tracker-v2_1.png",
+            "HabitTrackerV2/habit-tracker-v2_2.png",
+            "HabitTrackerV2/habit-tracker-v2_0.png",
+            "HabitTrackerV2/habit-tracker-v2_3.png",
+            "HabitTrackerV2/habit-tracker-v2_4.png",
+            "HabitTrackerV2/habit-tracker-v2_6.png",
+            "HabitTrackerV2/habit-tracker-v2_7.png",
         ],
         projectDescription:
-            "My 2nd attempt at Habit Tracker is an app that allows you to track progress for habits, while visually displaying that progress on a monthly heatmap per task.",
+            "Habit Tracker is an Electron application that allows users to effectively monitor and visualize their progress towards building positive habits on a monthly heatmap. With over a year of work going into this project, I learned a lot about best practices with React, TypeScript, and Electron. I am still working on this project, and am excited to continue learning from and expanding on it.",
         projectType: "Software",
         projectTypeDisplay: "Software (React / Electron)",
         technologies: [
@@ -14,10 +19,22 @@ export const projectsData: ProjectData[] = [
             "React",
             "TypeScript",
             "Node.JS",
+            "Zustand",
             "Tailwind CSS",
             "styled-components",
         ],
-        textBlocks: [],
+        textBlocks: [
+            {
+                header: "What I learned",
+                content: `- Best practices with React, TypeScript, and Electron
+- Node.js backend software development with Electron
+- Structuring a large-scale application with organized, modular code
+- Effective usage of React hooks and state management with Context API and Zustand
+- Performance optimization techniques, such as memoization and lowering the state
+- Data fetching and API integration with Supabase and Cloudflare Workers (In progress)
+`,
+            },
+        ],
         projectLinks: [
             {
                 linkName: "GitHub",
@@ -30,6 +47,7 @@ export const projectsData: ProjectData[] = [
         projectName: "Random File Selector",
         projectImages: [
             "RandomImageSelector/Random_File_Selector_1.png",
+            "RandomImageSelector/Random_File_Selector_4.png",
             "RandomImageSelector/Random_File_Selector_2.png",
             "RandomImageSelector/Random_File_Selector_3.png",
         ],
