@@ -54,14 +54,9 @@ function AboutMeInfo() {
                 <AboutMeProfilePicture />
             </div> */}
             <p className="text-base text-[#c4c4c4]">
-                From my years of personal programming experience, I bring
-                hands-on experience in designing responsive and dynamic user
-                interfaces using industry standard technologies such as React
-                and Node.js. My programming experience spans across Python,
-                Java, JS/TS and C#, and I have hands on experience managing data
-                through SQL and JSON databases. Additionally, I have experience
-                crafting user-friendly interfaces, leveraging tools such as
-                Adobe Xd and Figma.
+                Full-stack developer specializing in React/TypeScript applications with experience across web and desktop platforms. I've built cloud-integrated applications using modern tech stacks including Electron, Node.js, and various databases.<br/><br/>
+
+My diverse programming background (Python, Java, C#) and design skills (Figma, Adobe XD) enable me to approach projects holistically—from technical implementation to user experience. I focus on delivering performant, scalable solutions with a strong emphasis on clean code and best practices. 
             </p>
         </div>
     );

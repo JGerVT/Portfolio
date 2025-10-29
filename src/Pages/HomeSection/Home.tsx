@@ -61,11 +61,11 @@ export default function Home() {
                                 </span>
                             </h1>
                             <p className="text-[#c4c4c4]">
-                                As a developer, I'm passionate about creating 
-                                functional, responsive, and user-friendly applications. While 
-                                I'm currently in the early stages of my career, I'm eager to
-                                contribute my skills and learn from experienced
-                                professionals in the field.
+                                I'm a full-stack developer passionate about building modern, 
+                                responsive applications that solve real-world problems. 
+                                With extensive experience in React, TypeScript, and 
+                                full-stack development, I create everything from 
+                                cloud-integrated web apps to cross-platform desktop applications.
                             </p>
 
                             <div
