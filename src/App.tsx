@@ -12,10 +12,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Projects from "./Pages/PastWorks/Projects";
 import { ShowProjectInfo } from "./Pages/ShowProjInfo/ShowProjectInfo";
-import { FaGithub } from "react-icons/fa6";
-import { BiGlobe } from "react-icons/bi";
-import { projectsData } from "./Data/projectsData";
-import { ShowProjectInfoV1 } from "./Pages/ShowProjInfo/ShowProjectInfo copy_backup";
 
 function App() {
     return (

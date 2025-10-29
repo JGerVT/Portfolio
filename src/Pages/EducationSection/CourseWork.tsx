@@ -7,7 +7,7 @@ import {
     MathData,
     ProgrammingData,
     WebDevelopmentData,
-} from "./CourseWorkData";
+} from "../../Data/CourseWorkData";
 import AccordionBlob from "../../Resources/courseWorkBlob.svg";
 
 const data: CourseData[] = [

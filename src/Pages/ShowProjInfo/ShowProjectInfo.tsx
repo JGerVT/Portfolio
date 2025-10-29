@@ -53,11 +53,11 @@ export function ShowProjectInfo() {
                 setCurrentProjectViewing("");
             }}
         >
-            <div className="ProjectInfo absolute left-0 right-0 top-[62px] bottom-0 overflow-auto pt-[80px]">
+            <div className="ProjectInfo absolute bottom-0 left-0 right-0 top-[62px] overflow-auto pt-[25px]">
                 <CloseBTN containerRef={containerRef} />
                 <div
                     ref={containerRef}
-                    className="mb-6 w-[88%] max-w-[900px] mx-auto"
+                    className="mx-auto mb-6 w-[88%] max-w-[900px]"
                     onClick={(e) => {
                         e.stopPropagation();
                     }}
@@ -65,7 +65,7 @@ export function ShowProjectInfo() {
                     {currentProjectViewing !== "" && (
                         <>
                             <ImageViewer projectData={projData} />
-                            <div className="flex justify-between pt-6 gap-2">
+                            <div className="flex justify-between gap-2 pt-6">
                                 <CreateTechnologies projectData={projData} />
                                 {projData?.projectDate && (
                                     <div className="dateCreated shrink-0 text-sm text-white opacity-50">
@@ -94,7 +94,6 @@ function CloseBTN(props: { containerRef?: React.RefObject<HTMLDivElement> }) {
                 props.containerRef?.current?.getClientRects()[0].right || 0;
 
             console.log(window.innerWidth);
-            
 
             if (window.innerWidth < 600) left = left - 15;
 
@@ -109,9 +108,7 @@ function CloseBTN(props: { containerRef?: React.RefObject<HTMLDivElement> }) {
 
     return (
         <div
-            className="fixed right-[80px] top-[80px] flex h-[36px] w-[36px] cursor-pointer items-center justify-center rounded-full bg-[#1f265c]
-                opacity-80 hover:opacity-100 transition
-            "
+            className="fixed right-[80px] top-[80px] flex h-[36px] w-[36px] cursor-pointer items-center justify-center rounded-full bg-[#1f265c] opacity-80 transition hover:opacity-100"
             style={{
                 left: `${closeBTNPos.x}px`,
                 top: `${closeBTNPos.y}px`,
@@ -167,16 +164,16 @@ function CreateLinks(props: { projectData?: ProjectData }) {
                         props.projectData.projectLinks?.map((val, index) => (
                             <div
                                 key={index} // I know it's generally bad to use index as a key, but I'm doing this since the position of the items will not change
-                                className="mr-1 mt-3 inline-flex flex-grow-0 cursor-pointer select-none rounded border px-5 py-2 text-sm text-white"
+                                className="mr-1 mt-3 inline-flex flex-grow-0 cursor-pointer select-none rounded border px-4 py-2 text-sm text-white"
                                 style={{ borderColor: "#3bf8806f" }}
                             >
                                 <a
-                                    className="flex items-center justify-center space-x-1"
+                                    className="flex items-center justify-center gap-2"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     href={val.linkURL}
                                 >
-                                    <div className="h-[15px]">
+                                    <div className="flex h-[16px] items-center justify-center text-[16px]">
                                         {val.linkIcon}
                                     </div>
                                     <p>{val.linkName}</p>
@@ -197,7 +194,11 @@ function CreatePageContent(props: { projectData?: ProjectData }) {
                     const contentLines = val.content.split("\n");
                     const newContentLines = contentLines.map((line) => {
                         if (line.startsWith("- ")) {
-                            return <li key={line}>{line.slice(2)}</li>;
+                            return (
+                                <li key={line} className="ml-[16px]">
+                                    {line.slice(2)}
+                                </li>
+                            );
                         } else if (line === "") {
                             return <br key={line} />;
                         } else {
@@ -223,7 +224,7 @@ function CreatePageContent(props: { projectData?: ProjectData }) {
 
 function ImageViewer(props: { projectData?: ProjectData }) {
     return (
-        <div className="align-self-center max-w-[88%] mx-auto overflow-hidden rounded p-3 pb-1">
+        <div className="align-self-center mx-auto max-w-[88%] overflow-hidden rounded p-3 pb-1">
             <ScrollboxContainer
                 mainTitle=""
                 subTitle=""

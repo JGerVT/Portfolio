@@ -29,7 +29,7 @@ export const ProgrammingData = {
                     courseTime: "Fall - 2022",
                 },
                 {
-                    courseName: "Linux/ Unix Programming I",
+                    courseName: "Linux/Unix Programming I",
                     courseTime: "Fall - 2022",
                 },
                 {
