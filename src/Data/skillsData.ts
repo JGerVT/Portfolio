@@ -14,7 +14,7 @@ export const SkillsData = {
         {
             name: "TypeScript / JavaScript",
             amt: 85,
-            info: "Proficient in JavaScript and TypeScript, with extensive experience in web and application development.",
+            info: "Proficient in JavaScript and TypeScript, with extensive experience in web and application development. I have used interfaces, types, and generics extensively in my work.",
         },
         {
             name: "React",
@@ -58,11 +58,11 @@ export const SkillsData = {
             amt: 30,
             info: "Solid foundation in C#. Utilized for small projects and game development in Unity.",
         },
-        {
-            name: "Java",
-            amt: 30,
-            info: "Solid foundation in Java with experience across various projects. While not recently utilized, these skills remain applicable and ready for new challenges.",
-        },
+        // {
+        //     name: "Java",
+        //     amt: 30,
+        //     info: "Solid foundation in Java with experience across various projects. While not recently utilized, these skills remain applicable and ready for new challenges.",
+        // },
         // { name: "C/C++", amt: 15 },
     ],
     styling: [
@@ -87,11 +87,11 @@ export const SkillsData = {
             amt: 80,
             info: "Over 3 years of experience with SCSS. Comfortable with its syntax and features.",
         },
-        {
-            name: "Qt / PyQt",
-            amt: 30,
-            info: "Over 3 years of Qt and PyQt experience developing desktop applications. Skills remain applicable and ready for new projects.",
-        },
+        // {
+        //     name: "Qt / PyQt",
+        //     amt: 30,
+        //     info: "Over 3 years of Qt and PyQt experience developing desktop applications. Skills remain applicable and ready for new projects.",
+        // },
     ],
     design: [
         { header: "Design" },
@@ -123,11 +123,11 @@ export const SkillsData = {
             amt: 35,
             info: "Practical experience with PostgreSQL through Supabase integration, including database design, queries, and real-time subscriptions.",
         },
-        {
-            name: "Microsoft SQL",
-            amt: 20,
-            info: "Foundational understanding of Microsoft SQL, utilized in a few projects small projects during college.",
-        },
+        // {
+        //     name: "Microsoft SQL",
+        //     amt: 20,
+        //     info: "Foundational understanding of Microsoft SQL, utilized in a few projects small projects during college.",
+        // },
         // { name: "NoSQL", amt: 35 },
     ],
     cloudPlatforms: [
@@ -135,18 +135,18 @@ export const SkillsData = {
         {
             name: "Supabase",
             amt: 60,
-            info: "2 years of experience with Supabase, having utilized it in 1 large-scale application. I have a solid understanding of Supabase's features and am comfortable with its API.",
+            info: "3 years of experience with Supabase, having utilized it in 2 large-scale application. I have a solid understanding of Supabase's features and am comfortable with its API.",
         },
-        {
-            name: "CloudFlare Workers",
-            amt: 20,
-            info: "2 years of experience with Cloudflare Workers, having utilized it in 1 large-scale application. I have a solid understanding of Cloudflare Workers and am comfortable developing backend services for applications and websites.",
-        },
-        {
-            name: "Google Cloud",
-            amt: 10,
-            info: "I have surface-level knowledge of Google Cloud, having utilized it in a few smaller projects. While I have not had extensive experience with Google Cloud, I am eager to brush up on my Google Cloud skills and continue improving them to take on more complex projects.",
-        },
+        // {
+        //     name: "CloudFlare Workers",
+        //     amt: 20,
+        //     info: "2 years of experience with Cloudflare Workers, having utilized it in 1 large-scale application. I have a solid understanding of Cloudflare Workers and am comfortable developing backend services for applications and websites.",
+        // },
+        // {
+        //     name: "Google Cloud",
+        //     amt: 10,
+        //     info: "I have surface-level knowledge of Google Cloud, having utilized it in a few smaller projects. While I have not had extensive experience with Google Cloud, I am eager to brush up on my Google Cloud skills and continue improving them to take on more complex projects.",
+        // },
     ],
     otherTools: [
         { header: "Other Tools" },

@@ -11,7 +11,7 @@ export const projectsData: ProjectData[] = [
             "CloudNote/cloudnote_4.png",
         ],
         projectDescription:
-            "CloudNote is a React/TypeScript web application that syncs notes directly to the cloud using Supabase. Built with Node.js and Express for the backend, this project demonstrates full-stack development skills including REST API integration and real-time data synchronization.",
+            "CloudNote is a React/TypeScript web application that syncs notes directly to the cloud utilizing Supabase. This project demonstrates full-stack development skills including Authentication, Database Management, and Responsive Design.",
         projectType: "Website",
         projectTypeDisplay: "Website (React / TypeScript)",
         technologies: [
@@ -27,7 +27,7 @@ export const projectsData: ProjectData[] = [
                 header: "What I learned",
                 content: `- Implemented full‑stack user authentication & authorization with Supabase Auth (email/password & OAuth).  
 - Built a Node.js / Express backend that handles login, token verification, and secure CRUD endpoints.  
-- Integrated the backend with Supabase’s PostgreSQL database for persistent storage.  
+- Utilized Supabase PostgreSQL database for persistent storage.  
 - Added a client‑side cache (e.g., IndexedDB/localStorage) to serve data instantly and reduce network calls.  
 - Designed conflict‑resolution logic that merges cached changes with remote updates while maintaining the latest version.  
 `,
@@ -36,15 +36,14 @@ export const projectsData: ProjectData[] = [
         projectLinks: [
             {
                 linkIcon: <FaGithub />,
-                linkName: "GitHub",
-                linkURL: "https://github.com/JGerVT/cloudnote",
+                linkName: "Demo",
+                linkURL: "https://cloudnote-flame.vercel.app/",
             },
             {
                 linkIcon: <FaGithub />,
-                linkName: "Backend GitHub",
-                linkURL:
-                    "https://github.com/JGerVT/cloudnote/tree/implementing-account-management/node_server",
-            },
+                linkName: "GitHub",
+                linkURL: "https://github.com/JGerVT/cloudnote",
+            }
         ],
         projectDate: "Jun, 2025 - ",
     },
@@ -79,7 +78,8 @@ export const projectsData: ProjectData[] = [
 - Node.js backend software development with Electron
 - Structuring a large-scale application with organized, modular code
 - Effective usage of React hooks and state management with Context API and Zustand
-- Performance optimization techniques, such as memoization and lowering the state
+- Performance optimization techniques, such as memoization, lazy loading, and lowering the state
+- Developed my understanding of reusable code and typing with use of generics
 - Data fetching and API integration with Supabase and Cloudflare Workers (In progress)
 `,
             },
@@ -89,6 +89,11 @@ export const projectsData: ProjectData[] = [
                 linkIcon: <FaGithub />,
                 linkName: "GitHub",
                 linkURL: "https://github.com/JGerVT/Habit-Tracker-V2",
+            },
+            {
+                linkIcon: <FaDownload />,
+                linkName: "Download",
+                linkURL: "https://github.com/JGerVT/Habit-Tracker-V2/releases",
             },
         ],
         projectDate: "Jan, 2024 - ",
